@@ -109,6 +109,7 @@ function Header(props) {
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <Button
+                className="hover-underline-animation"
                 key={item.Text}
                 sx={{
                   color: "#fff",
