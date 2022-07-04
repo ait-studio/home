@@ -84,6 +84,7 @@ function Header(props) {
         component="nav"
         sx={{
           height: "75px",
+          backgroundColor: "#000",
         }}
       >
         <Toolbar
