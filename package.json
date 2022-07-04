@@ -1,0 +1,12 @@
+{
+  "name": "ait-studio",
+  "version": "0.0.1",
+  "description": "a simple spa webpage for ait stuio business site",
+  "main": "app.js",
+  "repository": "git@github.com:ait-studio/home.git",
+  "author": "hajun <audgkwns44@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}
