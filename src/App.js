@@ -1,13 +1,11 @@
 import "./App.css";
+import Header from "./components/Header";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="/tmp-logo.png" className="App-logo" alt="logo" />
-        <p>hello, World! This is AIT studio</p>
-      </header>
-    </div>
+    <>
+      <Header />
+    </>
   );
 }
 
