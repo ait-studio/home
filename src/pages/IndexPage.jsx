@@ -3,8 +3,19 @@ import { Box } from "@mui/system";
 import Header from "../components/Header";
 
 const headerFontStyle = {
+  color: "#FFF",
   fontWeight: "bold",
   fontSize: "200px",
+  paddingRight: "10vw",
+  textAlign: "right",
+};
+
+const headerDetailFrontStyle = {
+  color: "#FFF",
+  fontWeight: "bold",
+  fontSize: "40px",
+  paddingRight: "10vw",
+  textAlign: "right",
 };
 
 const headerDetailStyle = {
@@ -24,18 +35,22 @@ export default function MainPage() {
           backgroundSize: "cover",
         }}
       >
-        <Typography
-          variant="h1"
+        {/* Box for title */}
+        <Box
           sx={{
-            color: "#FFF",
             pl: "100vw",
-            pt: "100vh",
-            transform: "translate(-30vw, -50vh)",
-            ...headerFontStyle,
+            pt: "40vh",
+            transform: "translate(-40vw, 0)",
+            width: "40vw",
           }}
         >
-          AIT
-        </Typography>
+          <Typography variant="h1" sx={headerFontStyle}>
+            AIT
+          </Typography>
+          <Typography variant="h2" sx={headerDetailFrontStyle}>
+            your smart gym, AIT
+          </Typography>
+        </Box>
         <Typography variant="h2" sx={headerDetailStyle}></Typography>
       </Box>
     </>
