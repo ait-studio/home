@@ -80,8 +80,18 @@ function Header(props) {
 
   return (
     <Box sx={{ display: "flex" }}>
-      <AppBar component="nav">
-        <Toolbar>
+      <AppBar
+        component="nav"
+        sx={{
+          height: "75px",
+        }}
+      >
+        <Toolbar
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+          }}
+        >
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -91,18 +101,21 @@ function Header(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          >
-            AIT studio
-          </Typography>
+          <img
+            src="/tmp-logo.png"
+            alt="logo"
+            style={{ height: "100%", paddingRight: "10px" }}
+          />
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <Button
                 key={item.Text}
-                sx={{ color: "#fff" }}
+                sx={{
+                  color: "#fff",
+                  fontSize: "1.5em",
+                  fontWeight: "bold",
+                  m: "0px 30px",
+                }}
                 onClick={() => {
                   navigate(item.Link);
                 }}
