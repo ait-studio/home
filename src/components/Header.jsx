@@ -13,11 +13,34 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import { useNavigate } from "react-router-dom";
+
+// I will use...
+import LightModeIcon from "@mui/icons-material/LightMode";
+import DarkMode from "@mui/icons-material/DarkMode";
 
 const drawerWidth = 240;
-const navItems = ["Home", "회사소개", "제품소개", "IR"];
+const navItems = [
+  {
+    Text: "Home",
+    Link: "/",
+  },
+  {
+    Text: "회사소개",
+    Link: "/aboutteam",
+  },
+  {
+    Text: "제품소개",
+    Link: "/aboutsolution",
+  },
+  {
+    Text: "IR",
+    Link: "/ir",
+  },
+];
 
 function Header(props) {
+  const navigate = useNavigate();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -32,14 +55,19 @@ function Header(props) {
       className="header"
     >
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        AIT studio
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
+          <ListItem key={item.Text} disablePadding>
+            <ListItemButton
+              sx={{ textAlign: "center" }}
+              onClick={() => {
+                navigate(item.Link);
+              }}
+            >
+              <ListItemText primary={item.Text} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -72,8 +100,14 @@ function Header(props) {
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#fff" }}>
-                {item}
+              <Button
+                key={item.Text}
+                sx={{ color: "#fff" }}
+                onClick={() => {
+                  navigate(item.Link);
+                }}
+              >
+                {item.Text}
               </Button>
             ))}
           </Box>
