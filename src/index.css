@@ -35,3 +35,8 @@ code {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+.vertical-timeline-element-date {
+  color: #fff;
+  font-weight: bold;
+}
