@@ -40,7 +40,7 @@ export default function AboutTeamPage() {
           ></img>
         </Box>
         <Box>
-          <VerticalTimeline lineColor="black">
+          <VerticalTimeline lineColor="white">
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
               contentStyle={{
