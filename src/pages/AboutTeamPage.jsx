@@ -1,5 +1,6 @@
 import { Box } from "@mui/system";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 import VideoCameraFrontIcon from "@mui/icons-material/VideoCameraFront";
 import SmartToyIcon from "@mui/icons-material/SmartToy";
@@ -100,6 +101,7 @@ export default function AboutTeamPage() {
           </VerticalTimeline>
         </Box>
       </Box>
+      <Footer />
     </>
   );
 }
