@@ -103,7 +103,7 @@ function Header(props) {
             <MenuIcon />
           </IconButton>
           <img
-            src="/tmp-logo.png"
+            src="/ait_logo.png"
             alt="logo"
             style={{ height: "100%", paddingRight: "10px" }}
           />
