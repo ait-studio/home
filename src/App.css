@@ -36,3 +36,30 @@
     transform: rotate(360deg);
   }
 }
+
+.animatedBox {
+  animation: Appear 1s linear 0s normal;
+}
+
+.oppacityControl {
+  opacity: 0;
+  animation: OpacityControl 1s linear 1s forwards;
+}
+
+@keyframes Appear {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes OpacityControl {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
