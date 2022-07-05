@@ -15,10 +15,10 @@ export default function Footer() {
     <Grid container sx={footerWrapperStyle}>
       <Grid item xs={6} sx={{ textAlign: "left" }}>
         <RoomIcon />
-        Location | KT&G 상상플래닛, 서울시 성동구 뚝섬로 13길 38 (성수동 2가)
+        Location | 상상플래닛 707호, 서울시 성동구 뚝섬로 13길 38 (성수동 2가)
       </Grid>
       <Grid item xs={6} sx={{ textAlign: "right" }}>
-        대표자 박신기 | 010-1234-5678 | mockupemail@google.com
+        대표자 박신기 | amazing601@google.com
       </Grid>
     </Grid>
   );
