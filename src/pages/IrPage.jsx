@@ -4,7 +4,6 @@ import Footer from "../components/Footer";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
-import SmartToyIcon from "@mui/icons-material/SmartToy";
 import BuildIcon from "@mui/icons-material/Build";
 
 export default function IrPage() {
