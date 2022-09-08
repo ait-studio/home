@@ -84,7 +84,7 @@ function Header(props) {
         component="nav"
         sx={{
           height: "75px",
-          backgroundColor: "#000",
+          background: "rgba(0, 0, 0, 0.6)",
         }}
       >
         <Toolbar
@@ -105,7 +105,7 @@ function Header(props) {
           <img
             src="/ait_logo.png"
             alt="logo"
-            style={{ height: "100%", paddingRight: "10px" }}
+            style={{ height: "70%", paddingRight: "10px" }}
           />
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
