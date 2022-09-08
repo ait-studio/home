@@ -13,7 +13,7 @@ export default function IrPage() {
       <Box
         sx={{
           width: "100vw",
-          height: "calc(100vh - 91.5px)",
+          height: "calc(100vh - 85.5px)",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",

@@ -27,7 +27,8 @@ export default function AboutSolutionPage() {
       <Box
         sx={{
           width: "calc(100vw - 100px)",
-          height: "auto",
+          height: "calc(100vh - 385.5px)",
+          // padding 150px *2, footer 85.5px
           minHeight: "calc(100vh - 391.5px)",
           p: "150px 50px",
         }}
