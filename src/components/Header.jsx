@@ -102,11 +102,18 @@ function Header(props) {
           >
             <MenuIcon />
           </IconButton>
-          <img
-            src="/ait_logo.png"
-            alt="logo"
-            style={{ height: "70%", paddingRight: "10px" }}
-          />
+          <Button
+            sx={{
+              height: "80%",
+              paddingRight: "10px",
+              paddingTop: "10px",
+            }}
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            <img src="/ait_logo.png" alt="logo" style={{ height: "100%" }} />
+          </Button>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <Button
