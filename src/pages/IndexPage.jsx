@@ -1,6 +1,7 @@
 import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import Header from "../components/Header";
+import { useState } from "react";
 
 const headerFontStyle = {
   color: "#FFF",
@@ -8,12 +9,13 @@ const headerFontStyle = {
   fontSize: "200px",
   paddingRight: "10vw",
   textAlign: "right",
+  lineHeight: -2,
 };
 
 const headerDetailFrontStyle = {
   color: "#FFF",
   fontWeight: "bold",
-  fontSize: "40px",
+  fontSize: "32px",
   paddingRight: "10vw",
   textAlign: "right",
 };
@@ -23,6 +25,7 @@ const headerDetailStyle = {
 };
 
 export default function MainPage() {
+  const [titleWidth, setTitleWidth] = useState(50);
   return (
     <>
       <Header />
@@ -39,16 +42,18 @@ export default function MainPage() {
         <Box
           sx={{
             pl: "100vw",
-            pt: "40vh",
-            transform: "translate(-40vw, 0)",
-            width: "40vw",
+            pt: "20vh",
+            transform: `translate(-${titleWidth}vw, 0)`,
+            width: `${titleWidth}vw`,
           }}
         >
           <Typography variant="h1" sx={headerFontStyle}>
-            AIT
+            AIT studio
           </Typography>
           <Typography variant="h2" sx={headerDetailFrontStyle}>
-            your smart gym, AIT
+            시각딥러닝 전문기업,
+            <br />
+            (주)AIT Studio 입니다
           </Typography>
         </Box>
         <Typography variant="h2" sx={headerDetailStyle}></Typography>
