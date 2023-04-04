@@ -22,8 +22,10 @@ export default function AboutTeamPage() {
         sx={{
           display: "flex",
           height: "calc(100vh - 85.5px)",
-          backgroundImage: "url('/deadlift.avif')",
-          backgroundSize: "cover",
+          // backgroundImage: "url('/deadlift.avif')",
+          backgroundImage: "url('/pd_walking_motion.gif')",
+          backgroundColor: "#000",
+          backgroundSize: "contain",
         }}
       >
         <Box
@@ -33,14 +35,14 @@ export default function AboutTeamPage() {
             height: "calc(100% - 400px)",
             m: "200px 100px",
             p: "50px 0px",
-            backgroundColor: "rgba(255, 255, 255, 0.8)",
+            backgroundColor: "rgba(0, 0, 0, 0.4)",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
           }}
         >
-          <Typography
+          {/* <Typography
             sx={{ fontSize: 32, color: "rgb(69, 69, 69)", fontWeight: "bold" }}
           >
             헬스장의 ICT화로 PT비용을 80% 낮추는
@@ -67,10 +69,10 @@ export default function AboutTeamPage() {
             >
               플랫폼
             </Typography>
-          </Box>
+          </Box> */}
 
           <img
-            src="/ait_logo.png"
+            src="/Color_LOGOTYPE-main.png"
             alt="logo"
             style={{ height: "100px" }}
             className="oppacityControl"
@@ -80,24 +82,30 @@ export default function AboutTeamPage() {
             sx={{
               fontSize: 18,
               mb: -1,
-              color: "rgb(69, 69, 69)",
+              color: "rgb(255, 255, 255)",
               fontWeight: "bold",
             }}
           >
-            헬스케어 시각딥러닝 전문
+            컴퓨터비전 AI 전문
           </Typography>
           <Typography
             sx={{
               fontSize: 24,
               mb: 1,
-              color: "rgb(69, 69, 69)",
+              color: "rgb(255, 255, 255)",
               fontWeight: "bold",
             }}
           >
             에이트스튜디오(주)
           </Typography>
           <Tags
-            items={["SaaS", "인하우스개발", "시각딥러닝", "숏폼영상", "NFT"]}
+            items={[
+              "ESG",
+              "AI헬스케어",
+              "TDA(위상데이터분석)",
+              "시각딥러닝",
+              "SaaS",
+            ]}
           />
         </Box>
       </Box>

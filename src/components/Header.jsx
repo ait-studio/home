@@ -22,15 +22,15 @@ import DarkMode from "@mui/icons-material/DarkMode";
 const drawerWidth = 240;
 const navItems = [
   {
-    Text: "Home",
+    Text: "HOME",
     Link: "/",
   },
   {
-    Text: "회사소개",
+    Text: "TEAM",
     Link: "/aboutteam",
   },
   {
-    Text: "제품소개",
+    Text: "SOLUTIONS",
     Link: "/aboutsolution",
   },
   {
@@ -112,7 +112,11 @@ function Header(props) {
               navigate("/");
             }}
           >
-            <img src="/ait_logo.png" alt="logo" style={{ height: "100%" }} />
+            <img
+              src="/Color_LOGOTYPE-main.png"
+              alt="logo"
+              style={{ height: "100%" }}
+            />
           </Button>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
@@ -121,8 +125,8 @@ function Header(props) {
                 key={item.Text}
                 sx={{
                   color: "#fff",
-                  fontSize: "1.5em",
-                  fontWeight: "bold",
+                  fontSize: "1.0em",
+                  // fontWeight: "bold",
                   m: "0px 30px",
                 }}
                 onClick={() => {

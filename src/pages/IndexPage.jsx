@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import { useState } from "react";
 
 export default function MainPage() {
-  const [titleWidth, setTitleWidth] = useState(50);
+  const [titleWidth, setTitleWidth] = useState(100);
   return (
     <>
       <Header />
@@ -42,9 +42,11 @@ const styles = {
   wrapper: {
     width: "100vw",
     height: "100vh",
-    background:
-      "linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url('deadlift.avif')",
+    // background:
+    //   "linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url('deadlift.avif')",
     backgroundSize: "cover",
+    backgroundImage: "url('/pd_walking_motion.gif')",
+    backgroundColor: "#000",
   },
 
   headerFontStyle: {

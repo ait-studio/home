@@ -21,11 +21,11 @@ export default function Footer() {
       >
         <RoomIcon />
         <Typography sx={{ ml: 1 }}>
-          Location | 상상플래닛 707호, 서울시 성동구 뚝섬로 13길 38 (성수동 2가)
+          Location | 서울특별시 성동구 성수일로 20, 동일빌딩 3층
         </Typography>
       </Grid>
       <Grid item xs={6} sx={{ textAlign: "right" }}>
-        대표자 박신기 | amazing601@google.com
+        대표자 박신기 | amazing601@snu.ac.kr
       </Grid>
     </Grid>
   );
