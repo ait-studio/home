@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: "Inter-Variable";
+  src: url("./Inter-VariableFont_slnt,wght.ttf");
+}
+
+@font-face {
+  font-family: "Inter-Black";
+  src: url("./Inter-Black.ttf");
+}
+
+@font-face {
+  font-family: "Inter-Bold";
+  src: url("./Inter-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Inter-ExtraBold";
+  src: url("./Inter-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Inter-Light";
+  src: url("./Inter-Light.ttf");
+}
+
+@font-face {
+  font-family: "Inter-Medium";
+  src: url("./Inter-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Inter-Regular";
+  src: url("./Inter-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Inter-SemiBold";
+  src: url("./Inter-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Inter-Thin";
+  src: url("./Inter-Thin.ttf");
+}
+
+@font-face {
+  font-family: "Pretendard-Variable";
+  src: url("./PretendardVariable.ttf");
+}
+
+@font-face {
+  font-family: "Pretendard-Black";
+  src: url("./Pretendard-Black.ttf");
+}
+
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("./Pretendard-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Pretendard-ExtraBold";
+  src: url("./Pretendard-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Pretendard-ExtraLight";
+  src: url("./Pretendard-ExtraLight.ttf");
+}
+
+@font-face {
+  font-family: "Pretendard-Light";
+  src: url("./Pretendard-Light.ttf");
+}
+
+@font-face {
+  font-family: "Pretendard-Medium";
+  src: url("./Pretendard-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("./Pretendard-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("./Pretendard-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Pretendard-Thin";
+  src: url("./Pretendard-Thin.ttf");
+}
+
+@font-face {
+  font-family: "KOHIBaeumOTF";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KOHIBaeumOTF.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SBAggroB";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NanumSquareNeo-Variable";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
