@@ -18,24 +18,37 @@ import { useNavigate } from "react-router-dom";
 // I will use...
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkMode from "@mui/icons-material/DarkMode";
+import ScrollToTop from "../Tools/ScrollToTop";
+import { Link } from "react-scroll";
 
 const drawerWidth = 240;
 const navItems = [
   {
-    Text: "HOME",
-    Link: "/",
+    Text: "Home",
+    link: "/",
+    scroll_id: "landing",
+  },
+  // {
+  //   Text: "TEAM",
+  //   link: "/aboutteam",
+  // },
+  // {
+  //   Text: "SOLUTIONS",
+  //   link: "/aboutsolution",
+  // },
+  // {
+  //   Text: "IR",
+  //   link: "/ir",
+  // },
+  {
+    Text: "Solution",
+    link: "/",
+    scroll_id: "solution",
   },
   {
-    Text: "TEAM",
-    Link: "/aboutteam",
-  },
-  {
-    Text: "SOLUTIONS",
-    Link: "/aboutsolution",
-  },
-  {
-    Text: "IR",
-    Link: "/ir",
+    Text: "Contact",
+    link: "/",
+    scroll_id: "footer",
   },
 ];
 
@@ -64,7 +77,8 @@ function Header(props) {
             <ListItemButton
               sx={{ textAlign: "center" }}
               onClick={() => {
-                navigate(item.Link);
+                navigate(item.link);
+                ScrollToTop();
               }}
             >
               <ListItemText primary={item.Text} />
@@ -84,7 +98,14 @@ function Header(props) {
         component="nav"
         sx={{
           height: "75px",
-          background: "rgba(0, 0, 0, 0.6)",
+          // background: "rgba(0, 0, 0, 0.6)",
+          background: "#FFF",
+          paddingLeft: "10vw",
+          paddingRight: "10vw",
+          "& .MuiToolbar-gutters": {
+            paddingLeft: 0,
+            paddingRight: 0,
+          },
         }}
       >
         <Toolbar
@@ -92,6 +113,7 @@ function Header(props) {
             display: "flex",
             justifyContent: "space-between",
           }}
+          id="back-to-top-anchor"
         >
           <IconButton
             color="inherit"
@@ -103,38 +125,55 @@ function Header(props) {
             <MenuIcon />
           </IconButton>
           <Button
+            disableRipple
             sx={{
               height: "80%",
-              paddingRight: "10px",
-              paddingTop: "10px",
+              "&:hover": {
+                backgroundColor: "#FFF",
+              },
             }}
             onClick={() => {
               navigate("/");
+              ScrollToTop();
             }}
           >
             <img
-              src="/Color_LOGOTYPE-main.png"
+              src="/Black_LOGOTYPE-main_cut.png"
               alt="logo"
-              style={{ height: "100%" }}
+              style={{ height: "60%" }}
             />
           </Button>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button
-                className="hover-underline-animation"
-                key={item.Text}
-                sx={{
-                  color: "#fff",
-                  fontSize: "1.0em",
-                  // fontWeight: "bold",
-                  m: "0px 30px",
-                }}
-                onClick={() => {
-                  navigate(item.Link);
-                }}
-              >
-                {item.Text}
-              </Button>
+              <Link to={item.scroll_id} spy={true} offset={-75} key={item.Text}>
+                <Button
+                  disableRipple
+                  className="hover-underline-animation"
+                  sx={{
+                    color: "#000",
+                    fontFamily: "Pretendard-Light",
+                    fontSize: "1.0em",
+                    ml: "60px",
+                    textTransform: "none",
+                    "&:hover": {
+                      backgroundColor: "#FFF",
+                      boxShadow: "none",
+                      color: "rgb(163,74,61)",
+                    },
+                    "&:active": {
+                      boxShadow: "none",
+                      backgroundColor: "#FFF",
+                    },
+                  }}
+                  onClick={() => {
+                    navigate(item.link, {
+                      state: { scroll_id: item.scroll_id },
+                    });
+                  }}
+                >
+                  {item.Text}
+                </Button>
+              </Link>
             ))}
           </Box>
         </Toolbar>
