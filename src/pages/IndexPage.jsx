@@ -86,16 +86,32 @@ export default function MainPage() {
               display: "flex",
               flexDirection: "column",
               alignItems: "flex-end",
+              pr: "35px",
             }}
           >
-            <Box sx={{ pr: "5vw" }}>
+            <Box sx={{ position: "absolute", right: "180px", bottom: 0 }}>
               <img
-                class="dropShadowed"
+                className="dropShadowed"
+                src="/healthkit_change_mobility.png"
+                alt="change mobility"
+              />
+            </Box>
+            <Box>
+              <img
+                className="dropShadowed"
                 src="/pd-app-screen.png"
                 alt="pd app screen"
                 style={{
-                  height: "580px",
+                  height: "680px",
                 }}
+              />
+            </Box>
+
+            <Box sx={{ position: "absolute", right: "290px", bottom: "-30px" }}>
+              <img
+                className="dropShadowed"
+                src="/healthkit_icon.png"
+                alt="apple healthkit logo"
               />
             </Box>
           </Box>
@@ -105,6 +121,7 @@ export default function MainPage() {
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
+              pl: "35px",
             }}
           >
             <Box>
@@ -112,7 +129,6 @@ export default function MainPage() {
                 <Typography
                   sx={{
                     fontFamily: "Pretendard-Semibold",
-                    // textAlign: "center",
                     fontSize: "24px",
                     letterSpacing: 3,
                     color: "#CACACA",
@@ -130,19 +146,41 @@ export default function MainPage() {
               >
                 ParkinSense
               </Typography>
-              <Typography
-                sx={{
-                  width: "460px",
-                  fontFamily: "Pretendard-Thin",
-                  fontSize: "20px",
-                  marginBottom: "16px",
-                }}
-              >
-                IMU 센서를 넘어 최신 AI 기술로 파킨슨병 초기 운동증상(Motor
-                symptom)을 감지하는 솔루션입니다. 이미지/영상 분석 AI을 이용해
-                동결보행과 안면강직을 정량적으로 체크하고, 전문의 검증이 완료된
-                AI 문진표를 통해 자가진단을 돕습니다.
-              </Typography>
+              <Box sx={{ width: "540px" }}>
+                <Typography
+                  sx={{
+                    fontFamily: "Pretendard-Thin",
+                    fontSize: "20px",
+                    marginBottom: "16px",
+                  }}
+                >
+                  IMU 센서를 넘어 최신 AI 기술로 파킨슨병 초기 운동증상(Motor
+                  symptom)을 감지하는 솔루션입니다.
+                </Typography>
+                <Typography
+                  sx={{
+                    fontFamily: "Pretendard-Thin",
+                    fontSize: "20px",
+                    marginBottom: "16px",
+                  }}
+                >
+                  Apple HealthKit을 통해 이용자의 보행정보를 심리스하게
+                  크롤링하며, 이미지/영상 분석 AI을 이용해 동결보행과 안면강직을
+                  정량적으로 체크하고, 전문의 검증이 완료된 AI 문진표를 통해
+                  자가진단을 돕습니다.
+                </Typography>
+                <Typography
+                  sx={{
+                    fontFamily: "Pretendard-Thin",
+                    fontSize: "20px",
+                    marginBottom: "16px",
+                  }}
+                >
+                  키오스크용 윈도우 앱, 안드로이드 TV 등 다양한 디바이스와
+                  협업할 수 있습니다.
+                </Typography>
+              </Box>
+
               <Typography
                 sx={{
                   fontFamily: "Pretendard-Bold",
