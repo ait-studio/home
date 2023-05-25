@@ -14,7 +14,29 @@ export default function AboutSolutionPage() {
       <Header />
       <Box sx={{ ...styles.bodySize, ...styles.background }}>
         <Box sx={{ ...styles.centerize, ...styles.header }}>
-          <Typography sx={{ ...styles.headerText }}>Us Solutions</Typography>
+          <Typography sx={{ ...styles.headerText }}>Our Solutions</Typography>
+        </Box>
+        <Box sx={styles.cardWrapper}>
+          <Box
+            className="card"
+            sx={{ ...styles.card, ...styles.glassmorphism }}
+          >
+            <Typography sx={{ ...styles.cardTitle }}>ParkinSense</Typography>
+            <Typography sx={{ ...styles.cardSubTitle }}>
+              자가진단을 도와 초기치료가 중요한 파킨슨병 환자의 조기 내원을 유도
+            </Typography>
+            {/* <Box sx={{ ...styles.cardThumbnail }}>
+              Image for Represent this Item
+            </Box>
+            <Box
+              sx={{ ...styles.moreButton }}
+              onClick={() => {
+                alert("Modal window activator will come to here");
+              }}
+            >
+              <ControlPointIcon />
+            </Box> */}
+          </Box>
         </Box>
         <Box sx={styles.cardWrapper}>
           <Box
@@ -25,7 +47,7 @@ export default function AboutSolutionPage() {
             <Typography sx={{ ...styles.cardSubTitle }}>
               Fitness MoMenT, 헬스장의 ICT화
             </Typography>
-            <Box sx={{ ...styles.cardThumbnail }}>
+            {/* <Box sx={{ ...styles.cardThumbnail }}>
               Image for Represent this Item
             </Box>
             <Box
@@ -35,7 +57,7 @@ export default function AboutSolutionPage() {
               }}
             >
               <ControlPointIcon />
-            </Box>
+            </Box> */}
           </Box>
           <Box
             className="card"
@@ -45,7 +67,7 @@ export default function AboutSolutionPage() {
             <Typography sx={{ ...styles.cardSubTitle }}>
               FMMT for Education, 교육을 위한 ICT 장비
             </Typography>
-            <Box sx={{ ...styles.cardThumbnail }}>
+            {/* <Box sx={{ ...styles.cardThumbnail }}>
               Image for Represent this Item
             </Box>
             <Box
@@ -55,27 +77,7 @@ export default function AboutSolutionPage() {
               }}
             >
               <ControlPointIcon />
-            </Box>
-          </Box>
-          <Box
-            className="card"
-            sx={{ ...styles.card, ...styles.glassmorphism }}
-          >
-            <Typography sx={{ ...styles.cardTitle }}>PD App</Typography>
-            <Typography sx={{ ...styles.cardSubTitle }}>
-              Parkinson Disease App, 파킨슨 초기 진단장치
-            </Typography>
-            <Box sx={{ ...styles.cardThumbnail }}>
-              Image for Represent this Item
-            </Box>
-            <Box
-              sx={{ ...styles.moreButton }}
-              onClick={() => {
-                alert("Modal window activator will come to here");
-              }}
-            >
-              <ControlPointIcon />
-            </Box>
+            </Box> */}
           </Box>
         </Box>
       </Box>
@@ -88,14 +90,18 @@ const styles = {
   bodySize: {
     width: "100vw",
     height: "calc(100vh - 85.5px)",
+    overflow: "scroll",
     // padding 150px *2, footer 85.5px
     minHeight: "calc(100vh - 391.5px)",
     p: "150px 50px",
     boxSizing: "border-box",
   },
   background: {
-    background: "url('/deadlift.avif')",
-    backgroundSize: "cover",
+    // background: "url('/deadlift.avif')",
+    // backgroundSize: "cover",
+    backgroundImage: "url('/pd_walking_motion.gif')",
+    backgroundColor: "#000",
+    backgroundSize: "contain",
   },
   centerize: {
     display: "flex",
@@ -105,19 +111,23 @@ const styles = {
   header: {
     width: "100%",
     height: "10%",
-    backgroundColor: "#FFF",
-    borderRadius: "20px",
+    // backgroundColor: "#FFF",
+    // borderBottom: "1px solid rgb(255, 255, 255)",
+    borderRadius: "12px",
   },
   headerText: {
     fontWeight: "bold",
-    fontSize: 34,
+    fontSize: 24,
+    color: "#FFF",
   },
   cardTitle: {
-    fontSize: 24,
+    fontSize: 32,
     fontWeight: "bold",
+    color: "#FFF",
   },
   cardSubTitle: {
-    fontSize: 20,
+    fontSize: 16,
+    color: "#FFF",
   },
   card: {
     // width: "max-content",
@@ -130,9 +140,10 @@ const styles = {
   },
   glassmorphism: {
     backdropFilter: "blur(16px) saturate(180%)",
-    backgroundColor: "rgba(255, 255, 255, 0.75)",
+    backgroundColor: "rgba(0, 0, 0, 0.30)",
     borderRadius: "12px",
-    border: "1px solid rgba(209, 213, 219, 0.3)",
+    // border: "1px solid rgba(209, 213, 219, 0.3)",
+    // border: "1px solid rgba(0, 255, 0, 0.5)",
   },
   cardWrapper: {
     display: "flex",

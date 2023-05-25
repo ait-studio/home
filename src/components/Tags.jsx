@@ -16,7 +16,7 @@ const styles = {
   tag: {
     display: "inline",
     fontSize: 14,
-    color: "rgb(69, 69, 69)",
+    color: "rgb(255, 255, 255)",
     fontWeight: "bold",
   },
   spacing: {
