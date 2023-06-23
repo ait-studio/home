@@ -1,14 +1,26 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import KeyboardDoubleArrowDownOutlinedIcon from "@mui/icons-material/KeyboardDoubleArrowDownOutlined";
 import Grid from "@mui/material/Grid";
+import { Swiper, SwiperSlide } from "swiper/react";
+import {
+  Zoom,
+  Autoplay,
+  EffectFade,
+  Mousewheel,
+  Pagination,
+  Navigation,
+} from "swiper";
+import "swiper/css";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export default function MainPage() {
   const [titleWidth, setTitleWidth] = useState(100);
+  const windowSize = useRef([window.innerWidth, window.innerHeight]);
+
   return (
     <>
       <Header />
@@ -34,8 +46,8 @@ export default function MainPage() {
               <img
                 src="/Black_LOGOTYPE-horizontal_cut.png"
                 alt="logo"
-                style={{ height: "64px", marginBottom: "64px" }}
                 // className="oppacityControl"
+                className="aitLogo"
               />
             </Box>
           </Box>
@@ -72,7 +84,7 @@ export default function MainPage() {
         sx={{
           ...styles.wrapper,
           backgroundColor: "#F3F3F3",
-          pb: "2vh",
+          pb: "20px",
           p: "0 15vw",
           overflow: "scroll",
         }}
@@ -86,11 +98,8 @@ export default function MainPage() {
           container
           spacing={2}
           sx={{
-            // backgroundColor: "#F00",
-            // width: "100%",
             display: "flex",
             flexDirection: "row",
-            // flexWrap: "wrap",
             justifyContent: "flex-start",
           }}
         >
@@ -103,7 +112,7 @@ export default function MainPage() {
               display: "flex",
               flexDirection: "column",
               alignItems: "flex-end",
-              mb: "10vh",
+              mb: "50px",
               marginRight: "50px",
               paddingLeft: "180px",
             }}
@@ -138,11 +147,10 @@ export default function MainPage() {
             sm={12}
             xl={6}
             sx={{
-              // flex: 1,
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
-              mb: "10vh",
+              mb: "50px",
             }}
           >
             <Box>
@@ -167,15 +175,7 @@ export default function MainPage() {
               >
                 ParkinSense
               </Typography>
-              <Box
-                sx={
-                  {
-                    // width: "540px",
-                    // width: "30vw",
-                    // width: "100%",
-                  }
-                }
-              >
+              <Box>
                 <Typography sx={styles.solutionContent}>
                   IMU 센서를 넘어 최신 AI 기술로 파킨슨병 초기 운동증상(Motor
                   symptom)을 감지하는 솔루션입니다.
@@ -196,6 +196,7 @@ export default function MainPage() {
                 sx={{
                   fontFamily: "Pretendard-Bold",
                   color: "#999",
+                  marginBottom: "40px",
                 }}
               >
                 솔루션: 모바일 앱, 키오스크
@@ -213,16 +214,31 @@ export default function MainPage() {
           </Grid>
         </Grid>
       </Box>
-      <Box sx={{ display: "flex", overflow: "scroll" }}>
-        <img
-          src={"/IRSlide_capture_01.jpeg"}
-          // sx={{ width: "100%" }}
-        />
-        <img
-          src={"/IRSlide_capture_02.jpeg"}
-          // sx={{ width: "100%" }}
-        />
-      </Box>
+      <Swiper
+        slidesPerView={1}
+        breakpoints={{
+          900: {
+            slidesPerView: 2,
+          },
+        }}
+        grabCursor={true}
+        loop={true}
+        modules={[Autoplay]}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
+      >
+        <SwiperSlide>
+          <img src={"/IRSlide_capture_01.jpeg"} className="IRSwiperSlide" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={"/IRSlide_capture_02.jpeg"} className="IRSwiperSlide" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={"/IRSlide_capture_03.jpeg"} className="IRSwiperSlide" />
+        </SwiperSlide>
+      </Swiper>
       <Footer />
     </>
   );
@@ -254,7 +270,7 @@ const styles = {
   },
 
   headerDetailFrontStyle: {
-    width: "50vw",
+    // width: "50vw",
     fontFamily: "Pretendard-Thin",
     fontSize: "20px",
     lineHeight: 1.55,
