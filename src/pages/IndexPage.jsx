@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import Header from "../components/Header";
-import { useState } from "react";
 import KeyboardDoubleArrowDownOutlinedIcon from "@mui/icons-material/KeyboardDoubleArrowDownOutlined";
+import Grid from "@mui/material/Grid";
+
+import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export default function MainPage() {
@@ -70,7 +72,9 @@ export default function MainPage() {
         sx={{
           ...styles.wrapper,
           backgroundColor: "#F3F3F3",
-          pb: "12vh",
+          pb: "2vh",
+          p: "0 15vw",
+          overflow: "scroll",
         }}
       >
         <Box
@@ -78,15 +82,30 @@ export default function MainPage() {
         >
           <KeyboardDoubleArrowDownOutlinedIcon sx={{ fontSize: 40 }} />
         </Box>
-        <Box sx={{ display: "flex" }}>
-          <Box
+        <Grid
+          container
+          spacing={2}
+          sx={{
+            // backgroundColor: "#F00",
+            // width: "100%",
+            display: "flex",
+            flexDirection: "row",
+            // flexWrap: "wrap",
+            justifyContent: "flex-start",
+          }}
+        >
+          <Grid
+            item
+            sm={12}
+            xl={5}
             sx={{
-              flex: 1,
               position: "relative",
               display: "flex",
               flexDirection: "column",
               alignItems: "flex-end",
-              pr: "35px",
+              mb: "10vh",
+              marginRight: "50px",
+              paddingLeft: "180px",
             }}
           >
             <Box sx={{ position: "absolute", right: "180px", bottom: 0 }}>
@@ -106,7 +125,6 @@ export default function MainPage() {
                 }}
               />
             </Box>
-
             <Box sx={{ position: "absolute", right: "290px", bottom: "-30px" }}>
               <img
                 className="dropShadowed"
@@ -114,14 +132,17 @@ export default function MainPage() {
                 alt="apple healthkit logo"
               />
             </Box>
-          </Box>
-          <Box
+          </Grid>
+          <Grid
+            item
+            sm={12}
+            xl={6}
             sx={{
-              flex: 1.2,
+              // flex: 1,
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
-              pl: "35px",
+              mb: "10vh",
             }}
           >
             <Box>
@@ -146,36 +167,26 @@ export default function MainPage() {
               >
                 ParkinSense
               </Typography>
-              <Box sx={{ width: "540px" }}>
-                <Typography
-                  sx={{
-                    fontFamily: "Pretendard-Thin",
-                    fontSize: "20px",
-                    marginBottom: "16px",
-                  }}
-                >
+              <Box
+                sx={
+                  {
+                    // width: "540px",
+                    // width: "30vw",
+                    // width: "100%",
+                  }
+                }
+              >
+                <Typography sx={styles.solutionContent}>
                   IMU 센서를 넘어 최신 AI 기술로 파킨슨병 초기 운동증상(Motor
                   symptom)을 감지하는 솔루션입니다.
                 </Typography>
-                <Typography
-                  sx={{
-                    fontFamily: "Pretendard-Thin",
-                    fontSize: "20px",
-                    marginBottom: "16px",
-                  }}
-                >
+                <Typography sx={styles.solutionContent}>
                   Apple HealthKit을 통해 이용자의 보행정보를 심리스하게
                   크롤링하며, 이미지/영상 분석 AI을 이용해 동결보행과 안면강직을
                   정량적으로 체크하고, 전문의 검증이 완료된 AI 문진표를 통해
                   자가진단을 돕습니다.
                 </Typography>
-                <Typography
-                  sx={{
-                    fontFamily: "Pretendard-Thin",
-                    fontSize: "20px",
-                    marginBottom: "16px",
-                  }}
-                >
+                <Typography sx={styles.solutionContent}>
                   키오스크용 윈도우 앱, 안드로이드 TV 등 다양한 디바이스와
                   협업할 수 있습니다.
                 </Typography>
@@ -199,8 +210,18 @@ export default function MainPage() {
                 }}
               />
             </Box>
-          </Box>
-        </Box>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box sx={{ display: "flex", overflow: "scroll" }}>
+        <img
+          src={"/IRSlide_capture_01.jpeg"}
+          // sx={{ width: "100%" }}
+        />
+        <img
+          src={"/IRSlide_capture_02.jpeg"}
+          // sx={{ width: "100%" }}
+        />
       </Box>
       <Footer />
     </>
@@ -215,12 +236,11 @@ const styles = {
     alignItems: "baseline",
   },
   wrapper: {
-    width: "80vw",
+    // width: "80vw",
     // minHeight: "calc(90vh - 75px)",
     p: "0 10vw",
     // justifyContents: "center",
   },
-
   headerLabelStyle: {
     fontFamily: "Pretendard-Thin",
     fontSize: "24px",
@@ -243,9 +263,12 @@ const styles = {
   headerDetailStyle: {
     fontSize: "40px",
   },
-
   titleWrapper: {
-    // width: "100%",
     height: "20%",
+  },
+  solutionContent: {
+    fontFamily: "Pretendard-ExtraLight",
+    fontSize: "20px",
+    marginBottom: "16px",
   },
 };
