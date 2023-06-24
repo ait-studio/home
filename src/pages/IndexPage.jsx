@@ -84,7 +84,7 @@ export default function MainPage() {
         sx={{
           ...styles.wrapper,
           backgroundColor: "#F3F3F3",
-          pb: "20px",
+          pb: "30px",
           p: "0 15vw",
           overflow: "scroll",
         }}
@@ -106,12 +106,14 @@ export default function MainPage() {
           <Grid
             item
             sm={12}
+            md={5.5}
             xl={5}
             sx={{
               position: "relative",
               display: "flex",
               flexDirection: "column",
               alignItems: "flex-end",
+              justifyContent: "flex-end",
               mb: "50px",
               marginRight: "50px",
               paddingLeft: "180px",
@@ -145,6 +147,7 @@ export default function MainPage() {
           <Grid
             item
             sm={12}
+            md={5}
             xl={6}
             sx={{
               display: "flex",
