@@ -80,8 +80,11 @@ function Header(props) {
             <ListItemButton
               sx={{ textAlign: "center" }}
               onClick={() => {
-                navigate(item.link);
-                ScrollToTop();
+                navigate(item.link, {
+                  state: { scroll_id: item.scroll_id },
+                });
+                // navigate(item.link);
+                // ScrollToTop();
               }}
             >
               <ListItemText primary={item.Text} />
@@ -123,7 +126,7 @@ function Header(props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+            sx={{ mr: 2, display: { sm: "none" }, color: "#FFF" }}
           >
             <MenuIcon />
           </IconButton>
