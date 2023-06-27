@@ -1,3 +1,11 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
+
+# Naver Search Advisor Bot
+User-agent: Yeti
+Allow: /
+
+# Google Search Console Bot
+User-agent: Googlebot
+Allow: /
