@@ -86,6 +86,9 @@ html {
   .IRSwiperSlide {
     width: 100vw;
   }
+  .pdGIF {
+    min-width: 70vw;
+  }
 }
 
 @media (max-width: 600px) {

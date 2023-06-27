@@ -202,7 +202,7 @@ export default function MainPage() {
               mb: "50px",
             }}
           >
-            <Box sx={{ width: "100%" }}>
+            <Box sx={{ width: "100%", maxWidth: "70vw" }}>
               <Box sx={{ mt: "10px", mb: "10px" }}>
                 <Typography
                   sx={{
@@ -220,6 +220,7 @@ export default function MainPage() {
                   fontFamily: "Pretendard-ExtraBold",
                   fontSize: "54px",
                   marginBottom: "10px",
+                  wordWrap: "break-word",
                 }}
               >
                 ParkinSense
@@ -253,12 +254,11 @@ export default function MainPage() {
             </Box>
             <Box sx={{ mb: "5px" }}>
               <img
+                className="pdGIF"
                 src="/pd_walking_video_motion.gif"
                 alt="motion AI"
                 style={{
-                  width: "100%",
-                  maxWidth: "355px",
-                  // maxHeight: "200px",
+                  width: "50%",
                 }}
               />
             </Box>
