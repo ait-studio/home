@@ -67,8 +67,11 @@ function Header(props) {
       sx={{ textAlign: "center" }}
       className="header"
     >
-      <Typography variant="h6" sx={{ my: 2 }}>
-        AIT studio
+      <Typography
+        variant="h6"
+        sx={{ my: 2, fontFamily: "Pretendard-ExtraBold" }}
+      >
+        AIT STUDIO
       </Typography>
       <Divider />
       <List>
@@ -143,6 +146,7 @@ function Header(props) {
               style={{ height: "60%" }}
             />
           </Button>
+
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <Link to={item.scroll_id} spy={true} offset={-75} key={item.Text}>
