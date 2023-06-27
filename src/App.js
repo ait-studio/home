@@ -1,6 +1,7 @@
 import { createContext } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+import "./fonts/default.css";
 import IndexPage from "./pages/IndexPage";
 import AboutTeamPage from "./pages/AboutTeamPage";
 import AboutSolutionPage from "./pages/AboutSolutionPage";

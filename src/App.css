@@ -72,3 +72,25 @@ html {
 .dropShadowed {
   filter: drop-shadow(-7.5px 7.5px 10px gray);
 }
+
+.aitLogo {
+  width: 515px;
+  margin-bottom: 64px;
+}
+
+.IRSwiperSlide {
+  width: 50vw;
+}
+
+@media (max-width: 900px) {
+  .IRSwiperSlide {
+    width: 100vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .aitLogo {
+    width: 80vw;
+    margin-bottom: 40px;
+  }
+}
