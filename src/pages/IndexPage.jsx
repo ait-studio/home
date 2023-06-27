@@ -36,7 +36,7 @@ export default function MainPage() {
           }}
         >
           <Box sx={styles.titleWrapper}>
-            <Box sx={styles.flexRow}>
+            <Box sx={{ ...styles.flexRow, alignItems: "flex-end" }}>
               <Typography sx={styles.headerLabelStyle}>
                 A. I. Trend Leader
               </Typography>
@@ -96,59 +96,105 @@ export default function MainPage() {
         </Box>
         <Grid
           container
-          spacing={2}
+          spacing={8}
           sx={{
             display: "flex",
             flexDirection: "row",
             justifyContent: "flex-start",
+            alignItems: "flex-end",
           }}
         >
           <Grid
             item
             sm={12}
             md={5.5}
-            xl={5}
+            lg={5.5}
+            xl={5.5}
             sx={{
-              position: "relative",
               display: "flex",
               flexDirection: "column",
               alignItems: "flex-end",
               justifyContent: "flex-end",
               mb: "50px",
-              marginRight: "50px",
-              paddingLeft: "180px",
+              // marginRight: "50px",
+              // paddingLeft: "180px",
+              // height: "680px",
             }}
           >
-            <Box sx={{ position: "absolute", right: "180px", bottom: 0 }}>
-              <img
-                className="dropShadowed"
-                src="/healthkit_change_mobility.png"
-                alt="change mobility"
-              />
-            </Box>
-            <Box>
-              <img
-                className="dropShadowed"
-                src="/pd-app-screen.png"
-                alt="pd app screen"
-                style={{
-                  height: "680px",
+            <Box
+              sx={{
+                width: "100%",
+                height: "100%",
+                position: "relative",
+                display: "flex",
+                justifyContent: "flex-end",
+                alignItems: "flex-end",
+              }}
+            >
+              <Box
+                sx={{
+                  position: "absolute",
+                  bottom: 0,
+                  left: 0,
+                  width: "100%",
                 }}
-              />
-            </Box>
-            <Box sx={{ position: "absolute", right: "290px", bottom: "-30px" }}>
-              <img
-                className="dropShadowed"
-                src="/healthkit_icon.png"
-                alt="apple healthkit logo"
-              />
+              >
+                <img
+                  className="dropShadowed"
+                  src="/healthkit_change_mobility.png"
+                  alt="change mobility"
+                  style={{ width: "80%", maxWidth: "300px" }}
+                />
+              </Box>
+              <Box
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  // backgroundColor: "#F00",
+                  display: "flex",
+                  justifyContent: "flex-end",
+                  alignItems: "flex-end",
+                  paddingLeft: "20%",
+                  boxSizing: "border-box",
+                }}
+              >
+                <img
+                  className="dropShadowed"
+                  src="/pd-app-screen.png"
+                  alt="pd app screen"
+                  style={{
+                    // position: "absolute",
+                    // bottom: 0,
+                    // right: 0,
+                    width: "100%",
+                    // height: "100%",
+                    maxWidth: "360px",
+                  }}
+                />
+              </Box>
+              <Box
+                sx={{
+                  position: "absolute",
+                  bottom: "-40px",
+                  left: "10%",
+                  width: "100%",
+                }}
+              >
+                <img
+                  className="dropShadowed"
+                  src="/healthkit_icon.png"
+                  alt="apple healthkit logo"
+                  style={{ width: "50%", maxWidth: "200px" }}
+                />
+              </Box>
             </Box>
           </Grid>
           <Grid
             item
             sm={12}
-            md={5}
-            xl={6}
+            md={6.5}
+            lg={6.5}
+            xl={6.5}
             sx={{
               display: "flex",
               flexDirection: "column",
@@ -156,7 +202,7 @@ export default function MainPage() {
               mb: "50px",
             }}
           >
-            <Box>
+            <Box sx={{ width: "100%" }}>
               <Box sx={{ mt: "10px", mb: "10px" }}>
                 <Typography
                   sx={{
@@ -210,7 +256,9 @@ export default function MainPage() {
                 src="/pd_walking_video_motion.gif"
                 alt="motion AI"
                 style={{
-                  height: "200px",
+                  width: "100%",
+                  maxWidth: "355px",
+                  // maxHeight: "200px",
                 }}
               />
             </Box>
