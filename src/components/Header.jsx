@@ -15,40 +15,40 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 
-// I will use...
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkMode from "@mui/icons-material/DarkMode";
 import ScrollToTop from "../Tools/ScrollToTop";
 import { Link } from "react-scroll";
 
+/* for mobile view */
 const drawerWidth = 240;
 const navItems = [
-  {
-    Text: "Home",
-    link: "/",
-    scroll_id: "landing",
-  },
+  // {
+  //   Text: "Home",
+  //   link: "/",
+  //   scroll_id: "landing",
+  // },
   // {
   //   Text: "TEAM",
   //   link: "/aboutteam",
   // },
-  // {
-  //   Text: "SOLUTIONS",
-  //   link: "/aboutsolution",
-  // },
-  // {
-  //   Text: "IR",
-  //   link: "/ir",
-  // },
   {
-    Text: "Solution",
+    Text: "회사소개",
     link: "/",
-    scroll_id: "solution",
   },
   {
-    Text: "Contact",
+    Text: "서비스",
     link: "/",
-    scroll_id: "footer",
+  },
+  {
+    Text: "홍보센터",
+    link: "/",
+    // scroll_id: "solution",
+  },
+  {
+    Text: "협력·문의",
+    link: "/",
+    // scroll_id: "footer",
   },
 ];
 
@@ -61,6 +61,7 @@ function Header(props) {
     setMobileOpen(!mobileOpen);
   };
 
+  /* for mobile view */
   const drawer = (
     <Box
       onClick={handleDrawerToggle}
@@ -103,21 +104,21 @@ function Header(props) {
       <AppBar
         component="nav"
         sx={{
-          height: "75px",
-          // background: "rgba(0, 0, 0, 0.6)",
+          height: "100px",
           background: "#FFF",
-          paddingLeft: "10vw",
-          paddingRight: "10vw",
           "& .MuiToolbar-gutters": {
             paddingLeft: 0,
             paddingRight: 0,
           },
+          justifyContent: "center",
         }}
+        className="pageContent"
       >
         <Toolbar
           sx={{
             display: "flex",
             justifyContent: "space-between",
+            alignItems: "center",
           }}
           id="back-to-top-anchor"
         >
@@ -146,7 +147,7 @@ function Header(props) {
             <img
               src="/Black_LOGOTYPE-main_cut.png"
               alt="logo"
-              style={{ height: "60%" }}
+              style={{ width: "80px", height: "29px" }}
             />
           </Button>
 
@@ -157,15 +158,17 @@ function Header(props) {
                   disableRipple
                   className="hover-underline-animation"
                   sx={{
-                    color: "#000",
-                    fontFamily: "Pretendard-Light",
-                    fontSize: "1.0em",
-                    ml: "60px",
+                    color: "#444",
+                    fontFamily: "Inter",
+                    fontWeight: 700,
+                    fontSize: "20px",
+                    lineHeight: "32px",
+                    ml: "100px",
                     textTransform: "none",
                     "&:hover": {
-                      backgroundColor: "#FFF",
                       boxShadow: "none",
-                      color: "rgb(163,74,61)",
+                      backgroundColor: "#FFF",
+                      // color: "rgb(163,74,61)",
                     },
                     "&:active": {
                       boxShadow: "none",
@@ -185,6 +188,8 @@ function Header(props) {
           </Box>
         </Toolbar>
       </AppBar>
+
+      {/* for mobile view */}
       <Box component="nav">
         <Drawer
           container={container}

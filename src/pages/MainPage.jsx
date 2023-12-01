@@ -4,6 +4,7 @@ import { Box } from "@mui/system";
 import Grid from "@mui/material/Grid";
 import Footer from "../components/Footer";
 import ScrollToTopBtn from "../components/ScrollTopBtn";
+import Header from "../components/Header";
 
 function Cover() {
   return (
@@ -75,22 +76,22 @@ function Solution() {
 function Features() {
   return (
     <Box className="mainFeatures pageContent">
-      <Grid container>
-        <Grid item sm={12} xl={4} className="feature">
+      <Grid container justifyContent="center">
+        <Grid item sm={12} md={4} xl={4} className="feature">
           <Typography className="title">가격 80% 절감</Typography>
           <Box className="text">
             <Typography>AI 기술로 센서를 대체해</Typography>
             <Typography>기존 보행분석 장비 대비</Typography>
           </Box>
         </Grid>
-        <Grid item sm={12} xl={4} className="feature">
+        <Grid item sm={12} md={4} xl={4} className="feature">
           <Typography className="title">검사비 무료</Typography>
           <Box className="text">
             <Typography>AI 자동 해석기술로 전문가를 대체해</Typography>
             <Typography>통상 13만원 검사료 100% 절감</Typography>
           </Box>
         </Grid>
-        <Grid item sm={12} xl={4} className="feature">
+        <Grid item sm={12} md={4} xl={4} className="feature">
           <Typography className="title">높은 확장성</Typography>
           <Box className="text">
             <Typography>고성능 디바이스 기반으로 연구실,</Typography>
@@ -128,10 +129,10 @@ function News() {
     <Box className="mainNews pageContent">
       <Typography className="header">News</Typography>
       <Typography className="title">회사현황</Typography>
-      <Grid container spacing={3.5}>
+      <Grid container spacing={3.5} justifyContent="center">
         {[0, 0, 0, 0].map((item, idx) => {
           return (
-            <Grid item sm={6} xl={3} className="news" key={idx}>
+            <Grid item sm={6} md={3} xl={3} className="news" key={idx}>
               <Box className="thumbnail" />
               <Typography className="caption">
                 불러오는 게시글입니다.
@@ -166,6 +167,7 @@ function Partners() {
 export default function MainPage() {
   return (
     <Box>
+      <Header />
       <Cover />
       <Solution />
       <Features />
