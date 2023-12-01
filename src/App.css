@@ -604,7 +604,7 @@ span {
 
   .mainCover {
     height: auto;
-    padding: 0 16px;
+    /* padding: 0 16px; */
     padding-top: 350px;
     padding-bottom: 288px;
     background-image: none;
