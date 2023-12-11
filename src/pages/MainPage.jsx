@@ -5,6 +5,7 @@ import Grid from "@mui/material/Grid";
 import Footer from "../components/Footer";
 import ScrollToTopBtn from "../components/ScrollTopBtn";
 import Header from "../components/Header";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 function Cover() {
   return (
@@ -80,21 +81,21 @@ function Features() {
         <Grid item sm={12} md={4} xl={4} className="feature">
           <Typography className="title">가격 80% 절감</Typography>
           <Box className="text">
-            <Typography>AI 기술로 센서를 대체해</Typography>
+            <Typography>AI 기술로 센서를 대체해</Typography>{" "}
             <Typography>기존 보행분석 장비 대비</Typography>
           </Box>
         </Grid>
         <Grid item sm={12} md={4} xl={4} className="feature">
           <Typography className="title">검사비 무료</Typography>
           <Box className="text">
-            <Typography>AI 자동 해석기술로 전문가를 대체해</Typography>
+            <Typography>AI 자동 해석기술로 전문가를 대체해</Typography>{" "}
             <Typography>통상 13만원 검사료 100% 절감</Typography>
           </Box>
         </Grid>
         <Grid item sm={12} md={4} xl={4} className="feature">
           <Typography className="title">높은 확장성</Typography>
           <Box className="text">
-            <Typography>고성능 디바이스 기반으로 연구실,</Typography>
+            <Typography>고성능 디바이스 기반으로 연구실,</Typography>{" "}
             <Typography>노인시설 등 다양한 곳에서 활용가능</Typography>
           </Box>
         </Grid>
@@ -119,7 +120,11 @@ function Contact() {
           <Box className="button">구매 문의하기</Box>
         </Box>
       </Box>
-      <Box className="videoWrapper">홍보영상</Box>
+      <Box className="videoWrapper">
+        <video controls={true} autoPlay={false} loop={true}>
+          <source src={"./ait_promotion.mp4"} type="video/mp4" />
+        </video>
+      </Box>
     </Box>
   );
 }
@@ -130,13 +135,44 @@ function News() {
       <Typography className="header">News</Typography>
       <Typography className="title">회사현황</Typography>
       <Grid container spacing={3.5} justifyContent="center">
-        {[0, 0, 0, 0].map((item, idx) => {
+        {[
+          {
+            imgSrc: "/news_1.jpeg",
+            link: "https://www.mk.co.kr/news/it/10880891",
+            title: "에이트스튜디오, AI로 노인의 퇴행성 질환 진단",
+          },
+          {
+            imgSrc: "/news_2.jpeg",
+            link: "https://www.sedaily.com/NewsView/29W2K8YK2U",
+            title: "SBA, 오픈이노베이션 데모데이 ‘IMPACT DIVE 2023’ 개최",
+          },
+          {
+            imgSrc: "/news_3.png",
+            link: "https://www.aitimes.com/news/articleView.html?idxno=154454",
+            title: "에이트스튜디오, 파킨슨병 진단하는 모바일 앱 출시한다",
+          },
+          {
+            imgSrc: "/news_4.png",
+            link: "https://www.aitimes.com/news/articleView.html?idxno=152026",
+            title:
+              "[AI&빅데이터쇼] 에이트스튜디오, 파킨슨병 자가진단하는 AI 앱 소개",
+          },
+        ].map((item, idx) => {
+          console.log(item.imgSrc);
           return (
             <Grid item sm={6} md={3} xl={3} className="news" key={idx}>
-              <Box className="thumbnail" />
-              <Typography className="caption">
-                불러오는 게시글입니다.
-              </Typography>
+              <a href={item.link} target="_blank" rel="noreferrer">
+                <Box className="newsCard">
+                  <Box
+                    className="thumbnail"
+                    sx={{ backgroundImage: `url(${item.imgSrc})` }}
+                  />
+                  <Box sx={{ display: "flex" }}>
+                    <Typography className="caption">{item.title}</Typography>
+                    <OpenInNewIcon style={{ color: "#000" }} />
+                  </Box>
+                </Box>
+              </a>
             </Grid>
           );
         })}
@@ -151,14 +187,24 @@ function Partners() {
       <Typography className="header">PARTNERS</Typography>
       <Typography className="title">파트너와 함께합니다</Typography>
       <Box className="logoWrapper">
-        <img src="/logo_sk.png" alt="SK telecom" />
-        <img
-          src="/logo_esg2023.png"
-          alt="ESG Korea 2023 Powered by SK telecom"
-        />
-        <img src="/logo_snuh.png" alt="SNUH" />
-        <img src="/logo_nest.png" alt="Start-up NEST" />
-        <img src="/logo_hondream.png" alt="H OnDream" />
+        <Box>
+          <img src="/logo_sk.png" alt="SK telecom" />
+        </Box>
+        <Box>
+          <img
+            src="/logo_esg2023.png"
+            alt="ESG Korea 2023 Powered by SK telecom"
+          />
+        </Box>
+        <Box>
+          <img src="/logo_snuh.png" alt="SNUH" />
+        </Box>
+        <Box>
+          <img src="/logo_nest.png" alt="Start-up NEST" />
+        </Box>
+        <Box>
+          <img src="/logo_hondream.png" alt="H OnDream" />
+        </Box>
       </Box>
     </Box>
   );

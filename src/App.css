@@ -7,6 +7,10 @@ span {
   display: block;
 }
 
+a {
+  text-decoration: none;
+}
+
 .App {
   text-align: center;
 }
@@ -119,6 +123,7 @@ span {
 
 .pageContent {
   width: 100%;
+  width: 100vw;
   box-sizing: border-box;
   padding: 0 max(calc((100% - 1440px) / 2), 255px);
 }
@@ -409,16 +414,26 @@ span {
 }
 
 .mainContact .videoWrapper {
-  aspect-ratio: 538.5 / 359;
-  background: #d9d9d9;
+  /* aspect-ratio: 538.5 / 359; */
+  /* background: #d9d9d9; */
   margin: 120px 0;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.mainContact .videoWrapper video {
+  width: 90%;
+  /* height: 80%; */
 }
 
 /* Main - News */
 .mainNews {
   /* height: 788px; */
-  padding-top: 120px;
-  padding-bottom: 120px;
+  /* padding-top: 120px; */
+  /* padding-bottom: 120px; */
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   background: rgba(0, 148, 255, 0.1);
   display: flex;
   flex-direction: column;
@@ -448,10 +463,10 @@ span {
 }
 
 .mainNews .news .thumbnail {
-  /* height: 330px; */
   aspect-ratio: 1 / 1;
-  background: #777;
-  margin-bottom: 16px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 1rem;
 }
 
 .mainNews .news .caption {
@@ -460,7 +475,13 @@ span {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 32px; /* 160% */
+
+  display: inline;
+}
+
+.mainNews .news .newsCard {
+  margin-bottom: 2rem;
+  cursor: pointer;
 }
 
 /* Main - Partners */
@@ -501,32 +522,97 @@ span {
   align-items: center;
 }
 
-.mainPartners .logoWrapper img:nth-child(1) {
+.mainPartners .logoWrapper div {
+  min-height: 150px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.mainPartners .logoWrapper div:nth-child(1) img {
   width: 173px;
   height: 76px;
   margin-right: 80px;
 }
-.mainPartners .logoWrapper img:nth-child(2) {
+.mainPartners .logoWrapper div:nth-child(2) img {
   width: 203px;
   height: 46px;
   margin-right: 82px;
 }
-.mainPartners .logoWrapper img:nth-child(3) {
+.mainPartners .logoWrapper div:nth-child(3) img {
   width: 151px;
   height: 151px;
   margin-right: 84px;
 }
-.mainPartners .logoWrapper img:nth-child(4) {
+.mainPartners .logoWrapper div:nth-child(4) img {
   width: 132px;
   height: 110px;
   margin-right: 92px;
 }
-.mainPartners .logoWrapper img:nth-child(5) {
+.mainPartners .logoWrapper div:nth-child(5) img {
   width: 162px;
   height: 57px;
 }
 
+.pageTitle {
+  margin-top: calc(64px + 1rem);
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.pageTitle p {
+  color: #181818;
+  font-family: Inter;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px; /* 107.143% */
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.pageTitle .divider {
+  width: 3rem;
+  /* width: 80px; */
+  border-bottom: 1px solid #0094ff;
+}
+
+.newsPage {
+  padding-bottom: 4rem;
+}
+
+.newsPage .newsCard {
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.newsPage .newsCard .thumbnail {
+  width: 100%;
+  /* height: 100%; */
+  /* background-color: #ddd; */
+  aspect-ratio: 538.5 / 359;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 1rem;
+}
+
+.newsPage .newsCard .caption {
+  color: #444;
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 700;
+  display: inline;
+}
+
 @media (max-width: 640px) {
+  #back-to-top-anchor {
+    flex-direction: row-reverse;
+  }
+
   span {
     display: inline;
   }
@@ -536,22 +622,24 @@ span {
   }
 
   #scrollToTopBtn {
-    width: 80px;
-    height: 80px;
+    width: 3rem;
+    height: 3rem;
   }
 
   #scrollToTopBtn svg {
-    width: 58px;
+    width: 2rem;
   }
 
   .button {
-    width: 384px;
-    height: 96px;
+    width: auto;
+    height: auto;
+    width: fit-content;
+    padding: 1rem 2rem;
 
     border-radius: 8px;
 
-    font-size: 28px;
-    line-height: 40px;
+    font-size: 1rem;
+    line-height: 1.5;
   }
 
   #footer {
@@ -563,14 +651,14 @@ span {
   }
 
   #footer .logo {
-    width: 318px;
-    height: 40px;
+    width: auto;
+    height: 2rem;
     margin-bottom: 48px;
   }
 
   #footer > div:nth-child(1) p {
-    font-size: 28px;
-    line-height: 40px; /* 185.714% */
+    font-size: 1rem;
+    line-height: 1.5;
     margin-bottom: 8px;
   }
 
@@ -590,8 +678,8 @@ span {
   #footer div:nth-child(2) div p,
   #footer div:nth-child(2) div p:nth-child(2),
   #footer div:nth-child(2) > p {
-    font-size: 28px;
-    line-height: 40px; /* 185.714% */
+    font-size: 1rem;
+    line-height: 1.5;
   }
 
   #footer div:nth-child(2) div p:nth-child(1) {
@@ -604,16 +692,28 @@ span {
 
   .mainCover {
     height: auto;
-    /* padding: 0 16px; */
-    padding-top: 350px;
-    padding-bottom: 288px;
+    padding-top: calc(10rem + 100px);
+    padding-bottom: 9rem;
     background-image: none;
     background-color: #000;
   }
 
   .mainCover .caption p {
-    font-size: 30px;
-    line-height: 42px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .mainCover .aitLogo {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .mainCover .title .header {
+    margin-bottom: 1rem;
+  }
+
+  .mainCover .title .header p {
+    font-size: 1rem;
   }
 
   /* Main - Header & Title */
@@ -621,17 +721,16 @@ span {
   .mainContact .content .header p,
   .mainNews .header,
   .mainPartners .header {
-    font-size: 34px;
-    line-height: 50px;
+    font-size: 1.75rem;
+    line-height: 1.5;
   }
 
   .mainSolution .content .title p,
   .mainContact .content .title p,
   .mainNews .title,
   .mainPartners .title {
-    font-size: 54px;
-    line-height: 80px;
-    margin-bottom: 80px;
+    font-size: 2.25rem;
+    line-height: 1.5;
   }
 
   .mainSolution .content .title p,
@@ -647,24 +746,30 @@ span {
 
   .mainSolution .content {
     padding-bottom: 80px;
+    padding: 5rem 0 4rem 0;
+  }
+
+  .mainSolution .content .title {
+    margin-bottom: 2rem;
   }
 
   .mainSolution .content .paragraph {
     width: 100%;
+    margin-bottom: 3rem;
   }
 
   .mainSolution .content .paragraph p {
-    font-size: 28px;
-    line-height: 40px; /* 166.667% */
-    margin-bottom: 40px;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
   }
 
   .mainSolution img.kiosk {
-    /* width: 536px; */
     width: 100%;
     height: auto;
     margin-top: 0px;
     margin-bottom: 127px;
+    margin-bottom: 5rem;
   }
 
   /* Main - Solution */
@@ -678,7 +783,7 @@ span {
     height: auto;
     border-right: 0px;
 
-    margin-bottom: 120px;
+    margin-bottom: 5rem;
   }
 
   .mainFeatures .feature:nth-last-child(1) {
@@ -686,13 +791,18 @@ span {
   }
 
   .mainFeatures .feature .title {
-    font-size: 54px;
-    line-height: 80px;
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+
+  .mainFeatures .feature .text {
+    text-align: center;
   }
 
   .mainFeatures .feature .text p {
-    font-size: 28px;
-    line-height: 40px;
+    font-size: 1.25rem;
+    line-height: 1.5;
   }
 
   /* Main - Contact */
@@ -704,28 +814,38 @@ span {
   .mainContact .content {
     padding-bottom: 0px;
     margin-bottom: 80px;
+    margin-bottom: 4rem;
   }
 
   .mainContact .videoWrapper {
     width: 100%;
-    margin: 0 0 160px 0;
+    margin: 0 0 7rem 0;
+  }
+
+  .mainContact .videoWrapper video {
+    width: 100%;
+  }
+
+  .mainContact .content .title {
+    margin-bottom: 2rem;
   }
 
   .mainContact .content .button {
-    width: 280px;
+    width: auto;
+    padding: 1rem 1.5rem;
   }
 
   /* Main - Contact */
   .mainNews {
     height: auto;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
     align-items: start;
   }
 
   .mainNews .news .caption {
-    font-size: 28px;
-    line-height: 40px; /* 160% */
+    line-height: 1.5;
+    font-size: 1rem;
   }
 
   /* Main - Partners */
@@ -738,19 +858,24 @@ span {
 
   .mainPartners .logoWrapper {
     flex-wrap: wrap;
+    box-sizing: content-box;
   }
 
-  .mainPartners .logoWrapper img:nth-child(2) {
+  .mainPartners .logoWrapper div:nth-child(2) img {
     margin-right: 0px;
   }
-  .mainPartners .logoWrapper img:nth-child(3) {
+  .mainPartners .logoWrapper div:nth-child(3) img {
     margin-right: 64px;
   }
-  .mainPartners .logoWrapper img:nth-child(4) {
+  .mainPartners .logoWrapper div:nth-child(4) img {
     margin-right: 64px;
   }
-  .mainPartners .logoWrapper img:nth-child(5) {
+  .mainPartners .logoWrapper div:nth-child(5) img {
     margin-top: 25px;
+  }
+
+  .newsPage {
+    padding-bottom: 5rem;
   }
 }
 

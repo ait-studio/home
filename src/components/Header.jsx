@@ -10,6 +10,9 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
@@ -23,33 +26,33 @@ import { Link } from "react-scroll";
 /* for mobile view */
 const drawerWidth = 240;
 const navItems = [
-  // {
-  //   Text: "Home",
-  //   link: "/",
-  //   scroll_id: "landing",
-  // },
-  // {
-  //   Text: "TEAM",
-  //   link: "/aboutteam",
-  // },
   {
     Text: "회사소개",
-    link: "/",
+    subPage: [
+      {
+        text: "에이트스튜디오 소개",
+        link: "/",
+      },
+    ],
   },
-  {
-    Text: "서비스",
-    link: "/",
-  },
+  // {
+  //   Text: "서비스",
+  //   link: "/",
+  // },
   {
     Text: "홍보센터",
-    link: "/",
-    // scroll_id: "solution",
+    subPage: [
+      {
+        text: "뉴스",
+        link: "/news",
+      },
+    ],
   },
-  {
-    Text: "협력·문의",
-    link: "/",
-    // scroll_id: "footer",
-  },
+  // {
+  //   Text: "협력·문의",
+  //   link: "/",
+  //   // scroll_id: "footer",
+  // },
 ];
 
 function Header(props) {
@@ -65,31 +68,81 @@ function Header(props) {
   const drawer = (
     <Box
       onClick={handleDrawerToggle}
-      sx={{ textAlign: "center" }}
+      sx={{ textAlign: "center", padding: "1rem" }}
       className="header"
     >
-      <Typography
-        variant="h6"
-        sx={{ my: 2, fontFamily: "Pretendard-ExtraBold" }}
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          marginBottom: "2rem",
+        }}
       >
-        AIT STUDIO
-      </Typography>
-      <Divider />
+        <img
+          src="/Black_LOGOTYPE-main_cut.png"
+          alt="logo"
+          style={{ width: "auto", height: "1.5rem", marginLeft: "0.5rem" }}
+        />
+        <IconButton onClick={handleDrawerToggle}>
+          <CloseIcon style={{ fontSize: "2rem", color: "#000" }} />
+        </IconButton>
+      </Box>
       <List>
         {navItems.map((item) => (
-          <ListItem key={item.Text} disablePadding>
-            <ListItemButton
-              sx={{ textAlign: "center" }}
-              onClick={() => {
-                navigate(item.link, {
-                  state: { scroll_id: item.scroll_id },
-                });
-                // navigate(item.link);
-                // ScrollToTop();
+          <ListItem
+            key={item.Text}
+            disablePadding
+            sx={{
+              flexDirection: "column",
+              justifyContent: "flex-start",
+              marginBottom: "1.5rem",
+            }}
+          >
+            <Typography
+              sx={{
+                width: "100%",
+                textAlign: "left",
+                fontSize: "1.25rem",
+                fontFamily: "Inter",
+                fontWeight: "500",
               }}
             >
-              <ListItemText primary={item.Text} />
-            </ListItemButton>
+              {item.Text}
+            </Typography>
+            {item.subPage.map((subPage) => (
+              <ListItemButton
+                key={subPage.text}
+                sx={{
+                  width: "100%",
+                  textAlign: "left",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  padding: "0",
+                  margin: "1rem 0",
+                }}
+                onClick={() => {
+                  navigate(subPage.link, {
+                    state: { scroll_id: subPage.scroll_id },
+                  });
+                  // navigate(item.link);
+                  // ScrollToTop();
+                }}
+              >
+                <ListItemText
+                  style={{
+                    textAlign: "left",
+                    fontSize: "1rem",
+                    fontFamily: "Inter",
+                  }}
+                  primary={subPage.text}
+                />
+                <ArrowForwardIosIcon
+                  style={{ fontSize: "1rem", color: "#939393" }}
+                />
+              </ListItemButton>
+            ))}
+            <Box sx={{ width: "100%", borderBottom: "1px solid #d9d9d9" }} />
           </ListItem>
         ))}
       </List>
@@ -104,7 +157,9 @@ function Header(props) {
       <AppBar
         component="nav"
         sx={{
-          height: "100px",
+          // height: "2rem",
+          paddingTop: "0.5rem",
+          paddingBottom: "0.5rem",
           background: "#FFF",
           "& .MuiToolbar-gutters": {
             paddingLeft: 0,
@@ -127,7 +182,7 @@ function Header(props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" }, color: "#FFF" }}
+            sx={{ display: { sm: "none" }, color: "#000" }}
           >
             <MenuIcon />
           </IconButton>
@@ -147,7 +202,7 @@ function Header(props) {
             <img
               src="/Black_LOGOTYPE-main_cut.png"
               alt="logo"
-              style={{ width: "80px", height: "29px" }}
+              style={{ width: "auto", height: "1.5rem" }}
             />
           </Button>
 
@@ -176,8 +231,8 @@ function Header(props) {
                     },
                   }}
                   onClick={() => {
-                    navigate(item.link, {
-                      state: { scroll_id: item.scroll_id },
+                    navigate(item.subPage[0].link, {
+                      state: { scroll_id: item.subPage[0].scroll_id },
                     });
                   }}
                 >
@@ -203,7 +258,11 @@ function Header(props) {
             display: { xs: "block", sm: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
-              width: drawerWidth,
+              // width: drawerWidth,
+              width: "100%",
+              minHeight: "75vh",
+              height: "max-content",
+              paddingBottom: "50px",
             },
           }}
         >
