@@ -115,10 +115,7 @@ function Contact() {
           <Typography>2024년 1분기 출시</Typography>
           <Typography>할인된 가격에 만나보세요</Typography>
         </Box>
-        <Box
-          className="flexHor"
-          sx={{ flexWrap: "wrap", alignItems: "flex-start" }}
-        >
+        <Box className="btnWrapper flexHor">
           <Box className="button">제품 정보 상세보기</Box>
           <Box className="button">구매 문의하기</Box>
         </Box>

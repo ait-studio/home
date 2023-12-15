@@ -403,10 +403,19 @@ a {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  white-space: nowrap;
+}
+
+.mainContact .content .btnWrapper {
+  flex-wrap: nowrap;
+  align-items: flex-start;
 }
 
 .mainContact .content .button {
-  width: 223px;
+  /* width: 223px; */
+  width: max-content;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
   margin-right: 16px;
   margin-bottom: 0.75rem;
 }
@@ -635,6 +644,7 @@ a {
 }
 
 .sectionWrapper .title p {
+  width: 10rem;
   color: #181818;
   font-family: Inter;
   font-size: 1.75rem;
@@ -1043,6 +1053,10 @@ a {
     margin-bottom: 2rem;
   }
 
+  .mainContact .content .title p {
+    white-space: inherit;
+  }
+
   .mainContact .content .button {
     width: auto;
     padding: 1rem 1.5rem;
@@ -1100,7 +1114,8 @@ a {
     margin-bottom: 3rem;
   }
 
-  .sectionWrapper .title {
+  .sectionWrapper .title,
+  .sectionWrapper .title p {
     width: max-content;
   }
 
@@ -1115,4 +1130,8 @@ a {
   .aboutPage .history .content .timeline .eventWrapper {
     margin-bottom: 1rem;
   }
+
+  /* .mainContact .content .btnWrapper {
+    flex-wrap: wrap;
+  } */
 }
