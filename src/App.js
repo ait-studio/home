@@ -10,6 +10,7 @@ import "./fonts/default.css";
 // import IrPage from "./pages/IrPage";
 import MainPage from "./pages/MainPage";
 import NewsPage from "./pages/NewsPage";
+import AboutPage from "./pages/AboutPage";
 
 // const THEME = createTheme({
 //   typography: {
@@ -35,6 +36,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" exact element={<MainPage />} />
+        <Route path="/about" exact element={<AboutPage />} />
         <Route path="/news" exact element={<NewsPage />} />
         {/* <Route path="/aboutteam" exact element={<AboutTeamPage />} /> */}
         {/* <Route path="/aboutsolution" exact element={<AboutSolutionPage />} /> */}

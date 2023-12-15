@@ -11,7 +11,7 @@ function Footer() {
           alt="logo"
           className="logo invert"
         />
-        <Typography>문의: amazing601@ait.co.kr</Typography>
+        <Typography>문의: amazing@aitstudio.co.kr</Typography>
         <Typography>서울시 성동구 성수일로 20 동일빌딩 3층</Typography>
       </Box>
       <Box>

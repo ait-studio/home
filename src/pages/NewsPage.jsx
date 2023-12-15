@@ -11,8 +11,7 @@ import { Link } from "react-router-dom";
 
 function News() {
   return (
-    <Box className="newsPage pageContent">
-      <PageTitle text="뉴스" />
+    <Box className="news pageContent">
       <Grid container spacing={2}>
         {[
           {
@@ -44,9 +43,15 @@ function News() {
                   className="thumbnail"
                   sx={{ backgroundImage: `url(${item.imgSrc})` }}
                 />
-                <Box sx={{ display: "flex" }}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                  }}
+                >
                   <Typography className="caption">{item.title}</Typography>
-                  <OpenInNewIcon style={{ color: "#000" }} />
+                  <OpenInNewIcon style={{ color: "#000", fontSize: "1em" }} />
                 </Box>
               </Box>
             </a>
@@ -58,8 +63,9 @@ function News() {
 }
 export default function NewsPage() {
   return (
-    <Box>
+    <Box className="newsPage">
       <Header />
+      <PageTitle text="뉴스" />
       <News />
       <Footer />
       <ScrollToTopBtn />

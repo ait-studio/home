@@ -115,7 +115,10 @@ function Contact() {
           <Typography>2024년 1분기 출시</Typography>
           <Typography>할인된 가격에 만나보세요</Typography>
         </Box>
-        <Box className="flexHor">
+        <Box
+          className="flexHor"
+          sx={{ flexWrap: "wrap", alignItems: "flex-start" }}
+        >
           <Box className="button">제품 정보 상세보기</Box>
           <Box className="button">구매 문의하기</Box>
         </Box>
@@ -134,7 +137,7 @@ function News() {
     <Box className="mainNews pageContent">
       <Typography className="header">News</Typography>
       <Typography className="title">회사현황</Typography>
-      <Grid container spacing={3.5} justifyContent="center">
+      <Grid container spacing={2} justifyContent="center">
         {[
           {
             imgSrc: "/news_1.jpeg",
@@ -158,18 +161,24 @@ function News() {
               "[AI&빅데이터쇼] 에이트스튜디오, 파킨슨병 자가진단하는 AI 앱 소개",
           },
         ].map((item, idx) => {
-          console.log(item.imgSrc);
           return (
-            <Grid item sm={6} md={3} xl={3} className="news" key={idx}>
+            <Grid item xs={6} sm={6} md={3} xl={3} className="news" key={idx}>
               <a href={item.link} target="_blank" rel="noreferrer">
                 <Box className="newsCard">
                   <Box
                     className="thumbnail"
                     sx={{ backgroundImage: `url(${item.imgSrc})` }}
+                    // sx={{ backgroundColor: "#F00" }}
                   />
-                  <Box sx={{ display: "flex" }}>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                    }}
+                  >
                     <Typography className="caption">{item.title}</Typography>
-                    <OpenInNewIcon style={{ color: "#000" }} />
+                    <OpenInNewIcon style={{ color: "#000", fontSize: "1em" }} />
                   </Box>
                 </Box>
               </a>

@@ -31,7 +31,7 @@ const navItems = [
     subPage: [
       {
         text: "에이트스튜디오 소개",
-        link: "/",
+        link: "/about",
       },
     ],
   },
@@ -79,11 +79,19 @@ function Header(props) {
           marginBottom: "2rem",
         }}
       >
-        <img
-          src="/Black_LOGOTYPE-main_cut.png"
-          alt="logo"
-          style={{ width: "auto", height: "1.5rem", marginLeft: "0.5rem" }}
-        />
+        <Box
+          onClick={() => {
+            navigate("/");
+            ScrollToTop();
+          }}
+        >
+          <img
+            src="/Black_LOGOTYPE-main_cut.png"
+            alt="logo"
+            style={{ width: "auto", height: "1.5rem", marginLeft: "0.5rem" }}
+          />
+        </Box>
+
         <IconButton onClick={handleDrawerToggle}>
           <CloseIcon style={{ fontSize: "2rem", color: "#000" }} />
         </IconButton>
