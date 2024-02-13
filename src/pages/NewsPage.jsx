@@ -1,4 +1,3 @@
-import { useRef, useState } from "react";
 import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import Grid from "@mui/material/Grid";
@@ -7,7 +6,7 @@ import ScrollToTopBtn from "../components/ScrollTopBtn";
 import Header from "../components/Header";
 import PageTitle from "../components/PageTitle";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
-import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function News() {
   return (
@@ -62,10 +61,12 @@ function News() {
   );
 }
 export default function NewsPage() {
+  const { t } = useTranslation();
+
   return (
     <Box className="newsPage">
       <Header />
-      <PageTitle text="뉴스" />
+      <PageTitle text={t("news")} />
       <News />
       <Footer />
       <ScrollToTopBtn />

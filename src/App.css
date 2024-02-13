@@ -808,6 +808,37 @@ a {
   width: calc(100% + 16px);
 }
 
+.languageSwitchButton {
+  display: flex;
+  align-items: center;
+  color: #444;
+  margin-left: 1.5rem;
+}
+
+.languageSwitchButton .buttonWrapper {
+  display: flex;
+  cursor: pointer;
+}
+
+.languageSwitchButton .buttonWrapper .toggleButton {
+  display: flex;
+}
+
+.languageSwitchButton .buttonWrapper .toggleButton p {
+  padding: 0 0.5rem;
+}
+
+.languageSwitchButton .buttonWrapper .toggleButton.selected p {
+  font-weight: 800;
+}
+
+.languageSwitchButton
+  .buttonWrapper
+  .toggleButton:nth-last-child(1)
+  .MuiDivider-root {
+  display: none;
+}
+
 /* lg */
 @media (max-width: 1200px) {
   .aboutPage .background .referenceCard {

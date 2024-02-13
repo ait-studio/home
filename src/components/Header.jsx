@@ -2,7 +2,6 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
@@ -18,44 +17,35 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 
-import LightModeIcon from "@mui/icons-material/LightMode";
-import DarkMode from "@mui/icons-material/DarkMode";
 import ScrollToTop from "../Tools/ScrollToTop";
 import { Link } from "react-scroll";
-
-/* for mobile view */
-const drawerWidth = 240;
-const navItems = [
-  {
-    Text: "회사소개",
-    subPage: [
-      {
-        text: "에이트스튜디오 소개",
-        link: "/about",
-      },
-    ],
-  },
-  // {
-  //   Text: "서비스",
-  //   link: "/",
-  // },
-  {
-    Text: "홍보센터",
-    subPage: [
-      {
-        text: "뉴스",
-        link: "/news",
-      },
-    ],
-  },
-  // {
-  //   Text: "협력·문의",
-  //   link: "/",
-  //   // scroll_id: "footer",
-  // },
-];
+import { useTranslation } from "react-i18next";
+import LanguageSwitchButton from "./LanguageSwitchButton";
 
 function Header(props) {
+  const { t } = useTranslation();
+
+  const navItems = [
+    {
+      Text: t("about-us"),
+      subPage: [
+        {
+          text: t("about-ait-studio"),
+          link: "/about",
+        },
+      ],
+    },
+    {
+      Text: t("news-center"),
+      subPage: [
+        {
+          text: t("news"),
+          link: "/news",
+        },
+      ],
+    },
+  ];
+
   const navigate = useNavigate();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -194,25 +184,28 @@ function Header(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Button
-            disableRipple
-            sx={{
-              height: "80%",
-              "&:hover": {
-                backgroundColor: "#FFF",
-              },
-            }}
-            onClick={() => {
-              navigate("/");
-              ScrollToTop();
-            }}
-          >
-            <img
-              src="/Black_LOGOTYPE-main_cut.png"
-              alt="logo"
-              style={{ width: "auto", height: "1.5rem" }}
-            />
-          </Button>
+          <Box sx={{ display: "flex" }}>
+            <Button
+              disableRipple
+              sx={{
+                height: "80%",
+                "&:hover": {
+                  backgroundColor: "#FFF",
+                },
+              }}
+              onClick={() => {
+                navigate("/");
+                ScrollToTop();
+              }}
+            >
+              <img
+                src="/Black_LOGOTYPE-main_cut.png"
+                alt="logo"
+                style={{ width: "auto", height: "1.5rem" }}
+              />
+            </Button>
+            <LanguageSwitchButton />
+          </Box>
 
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (

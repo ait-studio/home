@@ -1,4 +1,3 @@
-import { useRef, useState } from "react";
 import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import Grid from "@mui/material/Grid";
@@ -7,69 +6,70 @@ import ScrollToTopBtn from "../components/ScrollTopBtn";
 import Header from "../components/Header";
 import PageTitle from "../components/PageTitle";
 import EastIcon from "@mui/icons-material/East";
+import { useTranslation } from "react-i18next";
+import LanguageSwitchButton from "../components/LanguageSwitchButton";
 
 function Background() {
+  const { t } = useTranslation();
+
   const references = [
     {
-      title: "치매 연관성",
-      type: "논문",
-      subTitle:
-        "Gait Speed and Decline in Gait Speed as Predictors of Incident Dementia",
+      title: t("about-background-ref-1-title"),
+      type: t("paper"),
+      subTitle: t("about-background-ref-1-subTitle"),
       link: "https://pubmed.ncbi.nlm.nih.gov/27302701/",
     },
     {
-      title: "치매 연관성",
-      type: "뉴스",
-      subTitle: "걸음걸이를 살피면 치매 가능성 알 수 있다?",
+      title: t("about-background-ref-2-title"),
+      type: t("news"),
+      subTitle: t("about-background-ref-2-subTitle"),
       link: "https://m.health.chosun.com/svc/news_view.html?contid=2021042001947",
     },
     {
-      title: "노화 연관성",
-      type: "뉴스",
-      subTitle: "빨리 걸으면 노화 느려진다.",
+      title: t("about-background-ref-3-title"),
+      type: t("news"),
+      subTitle: t("about-background-ref-3-subTitle"),
       link: "https://m.dongascience.com/news.php?idx=53798",
     },
     {
-      title: "파킨슨병",
-      type: "논문",
-      subTitle:
-        "Gait speed in Parkinson disease correlates with cholinergic degeneration",
+      title: t("about-background-ref-4-title"),
+      type: t("paper"),
+      subTitle: t("about-background-ref-4-subTitle"),
       link: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3806920/",
     },
     {
-      title: "근감소증",
-      type: "논문",
-      subTitle:
-        "Measuring Sarcopenia Severity in Older Adults and the Value of Effective Interventions",
+      title: t("about-background-ref-5-title"),
+      type: t("paper"),
+      subTitle: t("about-background-ref-5-subTitle"),
       link: "https://pubmed.ncbi.nlm.nih.gov/30498834/",
     },
 
     {
-      title: "근감소증",
-      type: "뉴스",
-      subTitle: "부모님과 걸을 때 '이것' 유심히 살펴 보세요",
+      title: t("about-background-ref-6-title"),
+      type: t("news"),
+      subTitle: t("about-background-ref-6-subTitle"),
       link: "https://mobile.hidoc.co.kr/healthstory/news/C0000783225",
     },
   ];
 
   const colorMap = {
+    //ko
     논문: "#009A9A",
     뉴스: "#0094FF",
+    //en
+    Papers: "#009A9A",
+    News: "#0094FF",
   };
 
   return (
     <Box className="sectionWrapper background">
       <Box className="title">
-        <Typography>배경</Typography>
+        <Typography>{t("about-background-title")}</Typography>
       </Box>
       <Box className="content">
         <Box className="inlineInMobile">
-          <Typography>
-            시니어의 뇌, 신경계, 근골격계 문제는 걸음에서 나타납니다.
-          </Typography>{" "}
-          <Typography>
-            많은 연구자들이 걸음과 퇴행성질환 사이의 연관성을 밝혀냈습니다.
-          </Typography>
+          <Typography>{t("about-background-content-1")}</Typography>{" "}
+          <Typography>{t("about-background-content-2")}</Typography>
         </Box>
         <Box>
           <Grid container spacing={2} className="gridContainer">
@@ -103,29 +103,18 @@ function Background() {
           </Grid>
         </Box>
         <Box className="paragraph">
+          <Typography>{t("about-background-paragraph-1")}</Typography>
+          <Typography>{t("about-background-paragraph-2")}</Typography>
           <Typography>
-            그런데 일상 생활에서 걸음속도, 보폭, 보행비대칭 등을 어떻게 측정할
-            수 있을까요?
-          </Typography>
-          <Typography>
-            AIT STUDIO는 혁신적인 AI카메라를 베이스로, 간편한 보행측정 도구
-            메디스텝을 개발했습니다.
-          </Typography>
-          <Typography>
-            몸에 붙이는 IMU센서, 압력 발판센서를 쓰면 통상 13만원의 검사료가
-            발생합니다. 전문가가 데이터를 해석해야 하기 때문이죠. 반면
-            메디스텝은{" "}
+            {t("about-background-paragraph-3")}{" "}
             <Typography
               sx={{ display: "inline", fontWeight: "700", color: "#0094FF" }}
             >
-              AI 측정부터 AI 해석까지 인공지능이 전과정을 자동화
+              {t("about-background-paragraph-4")}
             </Typography>
-            합니다.
+            {t("about-background-paragraph-5")}
           </Typography>
-          <Typography>
-            전국민이 무료로 보행건강을 측정하는 그날까지. 에이트스튜디오㈜의
-            메디스텝(MediStep)이 함께합니다.
-          </Typography>
+          <Typography>{t("about-background-paragraph-6")}</Typography>
         </Box>
       </Box>
     </Box>
@@ -133,29 +122,25 @@ function Background() {
 }
 
 function Mission() {
+  const { t } = useTranslation();
+
   return (
     <Box className="sectionWrapper missions">
       <Box className="title">
-        <Typography>미션/비전</Typography>
+        <Typography>{t("about-mission-title")}</Typography>
       </Box>
       <Box className="content">
         <Grid container spacing={2} className="gridContainer">
           <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
             <Box className="mission">
-              <Typography>
-                시니어의 동적 바이오마커인 걸음 분석의 글로벌 탑티어.
-              </Typography>{" "}
-              <Typography>Gait analysis Global Top tier</Typography>
+              <Typography>{t("about-mission-paragraph-1-1")}</Typography>{" "}
+              <Typography>{t("about-mission-paragraph-1-2")}</Typography>
             </Box>
           </Grid>
           <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
             <Box className="mission inlineInMobile">
-              <Typography>
-                사람의 눈을 대신하는 AI 기술로 우리 모두의 부양부담을 줄입니다.
-              </Typography>{" "}
-              <Typography>
-                시니어와 함께 걷는 기업 ─ 에이트스튜디오㈜
-              </Typography>
+              <Typography>{t("about-mission-paragraph-2-1")}</Typography>{" "}
+              <Typography>{t("about-mission-paragraph-2-2")}</Typography>
             </Box>
           </Grid>
         </Grid>
@@ -165,25 +150,27 @@ function Mission() {
 }
 
 function History() {
+  const { t } = useTranslation();
+
   const history = [
     {
       year: 2022,
       event: [
-        { month: 7, name: "에이트스튜디오㈜ 설립. Founded AIT STUDIO." },
-        { month: 11, name: "벤처기업인증." },
+        { month: 7, name: t("about-history-2022-1") },
+        { month: 11, name: t("about-history-2022-2") },
       ],
     },
     {
       year: 2023,
       event: [
-        { name: "SKT ESG KOREA 2023 참여" },
-        { name: "현대 H온드림 참여" },
-        { name: "KDB 스타트업 2023 참여" },
-        { name: "분당서울대병원 K-바이오 헬스케어 사업" },
-        { name: "광주테크노파크 치매 코호트 멀티모달 사업" },
-        { name: "신용보증기금 Start up NEST 14기" },
-        { name: "서울창업허브 성수 ─ SKT 대기업 오픈이노베이션 PoC 사업" },
-        { name: "서울창업허브 성수 입주" },
+        { name: t("about-history-2023-1") },
+        { name: t("about-history-2023-2") },
+        { name: t("about-history-2023-3") },
+        { name: t("about-history-2023-4") },
+        { name: t("about-history-2023-5") },
+        { name: t("about-history-2023-6") },
+        { name: t("about-history-2023-7") },
+        { name: t("about-history-2023-8") },
       ],
     },
   ];
@@ -191,7 +178,7 @@ function History() {
   return (
     <Box className="sectionWrapper history">
       <Box className="title">
-        <Typography>연혁</Typography>
+        <Typography>{t("about-history-title")}</Typography>
       </Box>
       <Box className="content">
         {history.map((timeline) => (
@@ -219,33 +206,35 @@ function History() {
 }
 
 function Peoples() {
+  const { t } = useTranslation();
+
   const peoples = [
     {
-      name: "박신기",
+      name: t("about-peoples-1-name"),
       resume: [
-        "-현대모비스 9년",
-        "-서울대 데이터사이언스대학원 AIoT랩(휴학)",
-        "-KAIST 기계학사",
+        t("about-peoples-1-resume-1"),
+        t("about-peoples-1-resume-2"),
+        t("about-peoples-1-resume-3"),
       ],
     },
     {
-      name: "명하준",
-      resume: ["에이트스튜디오", "수석개발자"],
+      name: t("about-peoples-2-name"),
+      resume: [t("about-peoples-2-resume-1"), t("about-peoples-2-resume-2")],
     },
     {
-      name: "주희민",
-      resume: ["에이트스튜디오", "개발자"],
+      name: t("about-peoples-3-name"),
+      resume: [t("about-peoples-3-resume-1"), t("about-peoples-3-resume-2")],
     },
     {
-      name: "정찬우",
-      resume: ["에이트스튜디오", "임베디드 개발자"],
+      name: t("about-peoples-4-name"),
+      resume: [t("about-peoples-4-resume-1"), t("about-peoples-4-resume-2")],
     },
   ];
 
   return (
     <Box className="sectionWrapper peoples">
       <Box className="title">
-        <Typography>함께하는 사람들</Typography>
+        <Typography>{t("about-peoples-title")}</Typography>
       </Box>
       <Box className="content">
         <Grid container spacing={2} className="gridContainer">
@@ -272,10 +261,12 @@ function Peoples() {
 }
 
 export default function AboutPage() {
+  const { t } = useTranslation();
+
   return (
     <Box className="aboutPage">
       <Header />
-      <PageTitle text="에이트스튜디오 소개" />
+      <PageTitle text={t("about-ait-studio")} />
       <Box className="pageContent">
         <Background />
         <Mission />

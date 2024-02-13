@@ -1,4 +1,3 @@
-import { createContext } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import { createTheme } from "@mui/material/styles";
 // import { ThemeProvider } from "@mui/material/styles";
@@ -38,9 +37,6 @@ function App() {
         <Route path="/" exact element={<MainPage />} />
         <Route path="/about" exact element={<AboutPage />} />
         <Route path="/news" exact element={<NewsPage />} />
-        {/* <Route path="/aboutteam" exact element={<AboutTeamPage />} /> */}
-        {/* <Route path="/aboutsolution" exact element={<AboutSolutionPage />} /> */}
-        {/* <Route path="/ir" exact element={<IrPage />} /> */}
       </Routes>
     </Router>
     // </ThemeProvider>
