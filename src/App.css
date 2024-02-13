@@ -839,6 +839,155 @@ a {
   display: none;
 }
 
+.product.gaitStudio .overview,
+.product.gaitStudio .aboutProduct {
+  text-align: center;
+}
+
+.product.gaitStudio .overview {
+  margin-top: 80px;
+}
+
+.product.gaitStudio .overview img {
+  max-width: 100%;
+}
+
+.product.gaitStudio .overview .catchphrase {
+  padding-top: 12rem;
+  margin-bottom: 2.5rem;
+}
+
+.product.gaitStudio .catchphrase p {
+  color: #939393;
+  font-family: Inter;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.85px;
+}
+
+.product.gaitStudio .overview .name {
+  color: #000;
+  font-family: Inter;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: normal;
+
+  margin-bottom: 2.5rem;
+}
+
+.product.gaitStudio .paragraph,
+.product.gaitStudio .aboutProduct img {
+  padding: 0 10%;
+}
+
+.product.gaitStudio .paragraph,
+.product.gaitStudio .paragraph p {
+  color: #939393;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+
+.product.gaitStudio .overview .paragraph div {
+  margin-bottom: 1rem;
+}
+
+.product.gaitStudio .overview .paragraph {
+  margin-bottom: 4rem;
+}
+
+.product.gaitStudio p.bold {
+  font-weight: 700;
+}
+
+.product.gaitStudio p.blue {
+  color: #0094ff;
+}
+
+.product.gaitStudio p.black {
+  color: #000;
+  padding: 0;
+}
+
+.product.gaitStudio .capsuleButton {
+  background-color: #007aff;
+  border-radius: 50px;
+  width: fit-content;
+  padding: 0.75rem 2.75rem;
+  margin: 0 auto;
+
+  cursor: pointer;
+  margin-bottom: 10rem;
+}
+
+.product.gaitStudio .capsuleButton p {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.product.gaitStudio .aboutProduct {
+  margin-bottom: 10rem;
+}
+
+.product.gaitStudio .aboutProduct .titleWrapper {
+  margin-bottom: 1rem;
+}
+
+.product.gaitStudio .title {
+  color: #000;
+  font-family: Inter;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.product.gaitStudio .aboutProduct .content {
+  margin-bottom: 4rem;
+}
+
+.product.gaitStudio .aboutProduct img {
+  max-width: 100%;
+  max-height: 16rem;
+  box-sizing: border-box;
+}
+
+.product.gaitStudio .promotion {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 4rem;
+}
+
+.product.gaitStudio .promotion .titleWrapper {
+  text-align: left;
+}
+
+.product.gaitStudio .promotion img.qr {
+  height: 12rem;
+}
+
+.product.gaitStudio .downloadButton {
+  position: absolute;
+  bottom: 1rem;
+
+  border-radius: 23px;
+  border: 1px solid #0094ff;
+  box-shadow: 2px 1px 4px 1px rgba(0, 148, 255, 0.25);
+  background-color: #fff;
+  padding: 1rem 2.5rem 0.75rem 2.5rem;
+
+  cursor: pointer;
+}
+
+.product.gaitStudio .downloadButton img {
+  height: 2rem;
+}
+
 /* lg */
 @media (max-width: 1200px) {
   .aboutPage .background .referenceCard {

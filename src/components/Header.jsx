@@ -209,7 +209,13 @@ function Header(props) {
 
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Link to={item.scroll_id} spy={true} offset={-75} key={item.Text}>
+              <Link
+                // to={item.scroll_id}
+                to="top"
+                spy={true}
+                offset={-75}
+                key={item.Text}
+              >
                 <Button
                   disableRipple
                   className="hover-underline-animation"

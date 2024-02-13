@@ -20,9 +20,9 @@ export default function ScrollToTopBtn() {
         <path
           d="M20 10L29 18.8682M20 10L11 18.8682M20 10V29.7071"
           stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     </Box>

@@ -7,7 +7,6 @@ import Header from "../components/Header";
 import PageTitle from "../components/PageTitle";
 import EastIcon from "@mui/icons-material/East";
 import { useTranslation } from "react-i18next";
-import LanguageSwitchButton from "../components/LanguageSwitchButton";
 
 function Background() {
   const { t } = useTranslation();
