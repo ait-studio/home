@@ -7,17 +7,32 @@ import AboutPage from "./pages/AboutPage";
 import MedistepPage from "./pages/MedistepPage";
 import GaitStudioPage from "./pages/GaitStudioPage";
 
+import { createTheme } from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material/styles";
+
+const THEME = createTheme({
+  typography: {
+    fontFamily: `"Inter", "Pretendard", "Helvetica", "Arial", sans-serif`,
+  },
+});
+
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" exact element={<MainPage />} />
-        <Route path="/about" exact element={<AboutPage />} />
-        <Route path="/news" exact element={<NewsPage />} />
-        <Route path="/product/medistep" exact element={<MedistepPage />} />
-        <Route path="/product/gaitstudio" exact element={<GaitStudioPage />} />
-      </Routes>
-    </Router>
+    <ThemeProvider theme={THEME}>
+      <Router>
+        <Routes>
+          <Route path="/" exact element={<MainPage />} />
+          <Route path="/about" exact element={<AboutPage />} />
+          <Route path="/news" exact element={<NewsPage />} />
+          <Route path="/product/medistep" exact element={<MedistepPage />} />
+          <Route
+            path="/product/gaitstudio"
+            exact
+            element={<GaitStudioPage />}
+          />
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
 }
 
