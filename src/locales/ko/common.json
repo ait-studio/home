@@ -1,5 +1,6 @@
 {
   "about-us": "회사소개",
+  "product": "서비스",
   "news-center": "홍보센터",
   "about-ait-studio": "에이트스튜디오 소개",
   "news": "뉴스",
@@ -41,6 +42,7 @@
   "main-partners-header": "PARTNERS",
   "main-partners-title": "파트너와 함께합니다",
 
+  "ait-studio": "AIT STUDIO",
   "about-background-title": "배경",
   "about-background-content-1": "시니어의 뇌, 신경계, 근골격계 문제는 걸음에서 나타납니다.",
   "about-background-content-2": "많은 연구자들이 걸음과 퇴행성질환 사이의 연관성을 밝혀냈습니다.",
@@ -93,6 +95,7 @@
   "about-peoples-4-resume-1": "에이트스튜디오",
   "about-peoples-4-resume-2": "임베디드 개발자",
 
+  "gait-studio": "Gait Studio",
   "product-gaitstudio-catchphrase-1": "AI 주도의 보행분석 앱,",
   "product-gaitstudio-catchphrase-2": "연구의 새로운 지평을 열다",
   "product-gaitstudio": "GAIT STUDIO",
@@ -113,6 +116,7 @@
   "product-gaitstudio-summary-2": "Gait Studio로 지금 시작해보세요",
 
   "kiosk": "키오스크",
+  "medistep": "Medistep",
   "product-medistep-catchphrase": "걸음으로 건강을 읽다",
   "product-medistep-about-1": "메디스텝 키오스크",
   "product-medistep-about-2": "는 사용자의 걷기 패턴을 섬세하게 분석하여 보행과 관련된 질병을 신속하게 진단하고, 필요한 경우 병원으로 안내합니다.",

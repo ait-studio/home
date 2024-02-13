@@ -30,8 +30,21 @@ function Header(props) {
       Text: t("about-us"),
       subPage: [
         {
-          text: t("about-ait-studio"),
+          text: t("ait-studio"),
           link: "/about",
+        },
+      ],
+    },
+    {
+      Text: t("product"),
+      subPage: [
+        {
+          text: t("medistep").toUpperCase(),
+          link: "/product/medistep",
+        },
+        {
+          text: t("gait-studio").toUpperCase(),
+          link: "/product/gaitstudio",
         },
       ],
     },
@@ -120,11 +133,8 @@ function Header(props) {
                   margin: "1rem 0",
                 }}
                 onClick={() => {
-                  navigate(subPage.link, {
-                    state: { scroll_id: subPage.scroll_id },
-                  });
-                  // navigate(item.link);
-                  // ScrollToTop();
+                  ScrollToTop();
+                  navigate(subPage.link);
                 }}
               >
                 <ListItemText
@@ -151,19 +161,18 @@ function Header(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box id="header" sx={{ display: "flex" }}>
       <AppBar
         component="nav"
         sx={{
-          // height: "2rem",
-          paddingTop: "0.5rem",
-          paddingBottom: "0.5rem",
           background: "#FFF",
           "& .MuiToolbar-gutters": {
             paddingLeft: 0,
             paddingRight: 0,
           },
           justifyContent: "center",
+          boxShadow: "none",
+          borderBottom: "1px #DDD solid",
         }}
         className="pageContent"
       >
@@ -194,8 +203,8 @@ function Header(props) {
                 },
               }}
               onClick={() => {
-                navigate("/");
                 ScrollToTop();
+                navigate("/");
               }}
             >
               <img
@@ -207,26 +216,13 @@ function Header(props) {
             <LanguageSwitchButton />
           </Box>
 
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item) => (
-              <Link
-                // to={item.scroll_id}
-                to="top"
-                spy={true}
-                offset={-75}
-                key={item.Text}
-              >
+          <Box sx={{ display: { xs: "none", sm: "flex" } }}>
+            {navItems.map((item) => {
+              return item.subPage.length === 1 ? (
                 <Button
                   disableRipple
-                  className="hover-underline-animation"
+                  className="navButton"
                   sx={{
-                    color: "#444",
-                    fontFamily: "Inter",
-                    fontWeight: 700,
-                    fontSize: "20px",
-                    lineHeight: "32px",
-                    ml: "100px",
-                    textTransform: "none",
                     "&:hover": {
                       boxShadow: "none",
                       backgroundColor: "#FFF",
@@ -238,15 +234,36 @@ function Header(props) {
                     },
                   }}
                   onClick={() => {
-                    navigate(item.subPage[0].link, {
-                      state: { scroll_id: item.subPage[0].scroll_id },
-                    });
+                    ScrollToTop();
+                    navigate(item.subPage[0].link);
                   }}
                 >
                   {item.Text}
                 </Button>
-              </Link>
-            ))}
+              ) : (
+                <Box className="dropdown" sx={{ position: "relative" }}>
+                  <Box className="navButton">
+                    <Typography>{item.Text}</Typography>
+                  </Box>
+                  <Box className="items">
+                    {item.subPage.map((subPage, idx) => {
+                      return (
+                        <Box
+                          key={idx}
+                          className="subPage"
+                          onClick={() => {
+                            ScrollToTop();
+                            navigate(subPage.link);
+                          }}
+                        >
+                          {subPage.text}
+                        </Box>
+                      );
+                    })}
+                  </Box>
+                </Box>
+              );
+            })}
           </Box>
         </Toolbar>
       </AppBar>

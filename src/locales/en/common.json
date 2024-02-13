@@ -1,5 +1,6 @@
 {
   "about-us": "About Us",
+  "product": "Product",
   "news-center": "News Center",
   "about-ait-studio": "About AIT STUDIO",
   "news": "News",
@@ -41,6 +42,7 @@
   "main-partners-header": "PARTNERS",
   "main-partners-title": "We're working with partners",
 
+  "ait-studio": "AIT STUDIO",
   "about-background-title": "Background",
   "about-background-content-1": "Brain, nervous system, and musculoskeletal problems in seniors are manifested in their gait.",
   "about-background-content-2": "Many researchers have found links between gait and degenerative diseases.",
@@ -93,6 +95,7 @@
   "about-peoples-4-resume-1": "AIT STUDIO",
   "about-peoples-4-resume-2": "Embedded Developer",
 
+  "gait-studio": "Gait Studio",
   "product-gaitstudio-catchphrase-1": "AI-driven gait analysis app,",
   "product-gaitstudio-catchphrase-2": "breaks new ground in research",
   "product-gaitstudio": "GAIT STUDIO",
@@ -113,6 +116,7 @@
   "product-gaitstudio-summary-2": "With GAIT STUDIO",
 
   "kiosk": "Kiosk",
+  "medistep": "Medistep",
   "product-medistep-catchphrase": "Reading your health through walking",
   "product-medistep-about-1": "The MediStep kiosk",
   "product-medistep-about-2": " delicately analyzes the user's gait patterns to promptly diagnose gait-related diseases and guides individuals to a hospital if necessary.",

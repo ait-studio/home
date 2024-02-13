@@ -145,6 +145,57 @@ a {
   width: 40px;
 }
 
+#header .navButton {
+  box-sizing: border-box;
+  height: 80px;
+  color: #444;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: normal;
+  margin: 0 2rem;
+  text-transform: none;
+}
+
+#header .dropdown .navButton {
+  display: flex;
+  align-items: center;
+  padding: 6px 8px;
+}
+
+#header .dropdown .navButton p {
+  font-weight: 700;
+}
+
+#header .dropdown .items {
+  display: none;
+  position: absolute;
+
+  width: max-content;
+  text-align: center;
+
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) translateY(100%);
+}
+
+#header .dropdown:hover .items {
+  display: block;
+  bottom: 0;
+
+  box-shadow: 0px 10px 10px -10px rgba(171, 171, 171, 0.35);
+}
+
+#header .dropdown:hover .items .subPage {
+  background-color: #fff;
+  color: #000;
+  font-weight: 500;
+
+  padding: 0.75rem 0.75rem;
+  border: 1px solid #d9d9d9;
+
+  cursor: pointer;
+}
+
 /* Footer */
 #footer {
   height: 208px;
@@ -1138,6 +1189,7 @@ a {
 .product.medistep .keyFeatures .content .feature {
   position: absolute;
   width: 19rem;
+  text-shadow: -2px 0px white, 0px 2px white, 2px 0px white, 0px -2px white;
 }
 
 .product.medistep .keyFeatures .content .feature.left {
