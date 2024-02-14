@@ -91,11 +91,11 @@ function Header(props) {
           <img
             src="/Black_LOGOTYPE-main_cut.png"
             alt="logo"
-            style={{ width: "auto", height: "1.5rem", marginLeft: "0.5rem" }}
+            style={{ width: "auto", height: "1.25rem", marginLeft: "0rem" }}
           />
         </Box>
 
-        <IconButton onClick={handleDrawerToggle}>
+        <IconButton onClick={handleDrawerToggle} style={{ padding: 0 }}>
           <CloseIcon style={{ fontSize: "2rem", color: "#000" }} />
         </IconButton>
       </Box>
@@ -121,35 +121,38 @@ function Header(props) {
             >
               {item.Text}
             </Typography>
-            {item.subPage.map((subPage) => (
-              <ListItemButton
-                key={subPage.text}
-                sx={{
-                  width: "100%",
-                  textAlign: "left",
-                  display: "flex",
-                  justifyContent: "space-between",
-                  padding: "0",
-                  margin: "1rem 0",
-                }}
-                onClick={() => {
-                  ScrollToTop();
-                  navigate(subPage.link);
-                }}
-              >
-                <ListItemText
-                  style={{
+            <Box sx={{ width: "100%", margin: "0.75rem 0" }}>
+              {item.subPage.map((subPage) => (
+                <ListItemButton
+                  key={subPage.text}
+                  sx={{
+                    width: "100%",
                     textAlign: "left",
-                    fontSize: "1rem",
-                    fontFamily: "Inter",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    padding: "0",
+                    margin: "0.25rem 0",
                   }}
-                  primary={subPage.text}
-                />
-                <ArrowForwardIosIcon
-                  style={{ fontSize: "1rem", color: "#939393" }}
-                />
-              </ListItemButton>
-            ))}
+                  onClick={() => {
+                    ScrollToTop();
+                    navigate(subPage.link);
+                  }}
+                >
+                  <ListItemText
+                    style={{
+                      textAlign: "left",
+                      fontSize: "1rem",
+                      fontFamily: "Inter",
+                    }}
+                    primary={subPage.text}
+                  />
+                  <ArrowForwardIosIcon
+                    style={{ fontSize: "1rem", color: "#939393" }}
+                  />
+                </ListItemButton>
+              ))}
+            </Box>
+
             <Box sx={{ width: "100%", borderBottom: "1px solid #d9d9d9" }} />
           </ListItem>
         ))}
@@ -161,7 +164,7 @@ function Header(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box id="header" sx={{ display: "flex" }}>
+    <Box id="header" className="no-scroll" sx={{ display: "flex" }}>
       <AppBar
         component="nav"
         sx={{
@@ -206,11 +209,12 @@ function Header(props) {
                 ScrollToTop();
                 navigate("/");
               }}
+              className="logoBtn"
             >
               <img
+                className="logo"
                 src="/Black_LOGOTYPE-main_cut.png"
                 alt="logo"
-                style={{ width: "auto", height: "1.5rem" }}
               />
             </Button>
             <LanguageSwitchButton />
@@ -242,7 +246,13 @@ function Header(props) {
                 </Button>
               ) : (
                 <Box className="dropdown" sx={{ position: "relative" }}>
-                  <Box className="navButton">
+                  <Box
+                    className="navButton"
+                    onClick={() => {
+                      ScrollToTop();
+                      navigate(item.subPage[0].link);
+                    }}
+                  >
                     <Typography>{item.Text}</Typography>
                   </Box>
                   <Box className="items">

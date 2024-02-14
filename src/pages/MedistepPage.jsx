@@ -126,19 +126,19 @@ function KeyFeatures() {
       </Typography>
       <Box className="content">
         <img src="/medistep-side.png" alt="medistep side" />
-        <Box className="feature left top">
+        <Box className="feature left top outlined">
           <Typography className="title">{features[0].title}</Typography>
           <Typography className="paragraph">{features[0].content}</Typography>
         </Box>
-        <Box className="feature left bottom">
+        <Box className="feature left bottom outlined">
           <Typography className="title">{features[1].title}</Typography>
           <Typography className="paragraph">{features[1].content}</Typography>
         </Box>
-        <Box className="feature right top">
+        <Box className="feature right top outlined">
           <Typography className="title">{features[2].title}</Typography>
           <Typography className="paragraph">{features[2].content}</Typography>
         </Box>
-        <Box className="feature right bottom">
+        <Box className="feature right bottom outlined">
           <Typography className="title">{features[3].title}</Typography>
           <Typography className="paragraph">{features[3].content}</Typography>
         </Box>
@@ -168,7 +168,7 @@ function AISensing() {
 
   return (
     <Box className="AISensing">
-      <Box className="videoWrapper">AI 센싱 영상</Box>
+      <Box className="videoWrapper"></Box>
       <Typography className="paragraph">
         {t("product-medistep-ai-sensing-content")}
       </Typography>

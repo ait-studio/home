@@ -6,6 +6,13 @@ import ScrollToTopBtn from "../components/ScrollTopBtn";
 import Header from "../components/Header";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
+import ScrollToTop from "../Tools/ScrollToTop";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+// import required modules
+import { Autoplay } from "swiper/modules";
 
 function Cover() {
   const { t } = useTranslation();
@@ -18,10 +25,10 @@ function Cover() {
           <Box className="divider" />
         </Box>
         <img
-          src="/Black_LOGOTYPE-horizontal_cut.png"
+          src="/White_LOGOTYPE-horizontal_cut.png"
           alt="AIT studio logo"
           // className="oppacityControl"
-          className="aitLogo invert"
+          className="aitLogo"
         />
       </Box>
       <Box className="caption">
@@ -35,18 +42,19 @@ function Cover() {
 
 function Solution() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   return (
     <Box className="mainSolution pageContent">
       <Box className="content">
-        <Box className="header">
+        <Box className="header outlined">
           <Typography>{t("main-solution-header")}</Typography>
         </Box>
-        <Box className="title">
+        <Box className="title outlined">
           <Typography>{t("main-solution-title-1")}</Typography>
           <Typography>{t("main-solution-title-2")}</Typography>
         </Box>
-        <Box className="paragraph">
+        <Box className="paragraph outlined">
           <Typography>
             <span>{t("main-solution-paragraph-1-1")}</span>
             <span>{t("main-solution-paragraph-1-2")}</span>
@@ -60,7 +68,15 @@ function Solution() {
             <span>{t("main-solution-paragraph-3-2")}</span>
           </Typography>
         </Box>
-        <Box className="button">{t("main-solution-button")}</Box>
+        <Box
+          className="button"
+          onClick={() => {
+            ScrollToTop();
+            navigate("/product/medistep");
+          }}
+        >
+          {t("main-solution-button")}
+        </Box>
       </Box>
       <img
         src="/img_kiosk.png"
@@ -76,7 +92,7 @@ function Features() {
   const { t } = useTranslation();
 
   return (
-    <Box className="mainFeatures pageContent">
+    <Box className="mainFeatures pageContent no-scroll">
       <Grid container justifyContent="center">
         <Grid item sm={12} md={4} xl={4} className="feature">
           <Typography className="title">
@@ -112,6 +128,7 @@ function Features() {
 
 function Contact() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   return (
     <Box className="mainContact pageContent">
@@ -124,8 +141,22 @@ function Contact() {
           <Typography>{t("main-contact-title-2")}</Typography>
         </Box>
         <Box className="btnWrapper flexHor">
-          <Box className="button">{t("main-contact-button-1")}</Box>
-          <Box className="button">{t("main-contact-button-2")}</Box>
+          <Box
+            className="button"
+            onClick={() => {
+              ScrollToTop();
+              navigate("/product/medistep");
+            }}
+          >
+            {t("main-contact-button-1")}
+          </Box>
+          <a
+            href="mailto:amazing@aitstudio.co.kr"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Box className="button">{t("main-contact-button-2")}</Box>
+          </a>
         </Box>
       </Box>
       <Box className="videoWrapper">
@@ -200,29 +231,60 @@ function News() {
 function Partners() {
   const { t } = useTranslation();
 
+  const partners = [
+    {
+      imgSrc: "/logo_sk.png",
+      alt: "SK telecom",
+      id: "SK-telecom",
+    },
+    {
+      imgSrc: "/logo_esg2023.png",
+      alt: "ESG Korea 2023 Powered by SK telecom",
+      id: "ESG-Korea-2023",
+    },
+    {
+      imgSrc: "/logo_snuh.png",
+      alt: "SNUH",
+      id: "SNUH",
+    },
+    {
+      imgSrc: "/logo_nest.png",
+      alt: "Start-up NEST",
+      id: "start-up-NEST",
+    },
+    {
+      imgSrc: "/logo_hondream.png",
+      alt: "H OnDream",
+      id: "H-OnDream",
+    },
+  ];
+
   return (
     <Box className="mainPartners pageContent">
       <Typography className="header">{t("main-partners-header")}</Typography>
       <Typography className="title">{t("main-partners-title")}</Typography>
-      <Box className="logoWrapper">
-        <Box>
-          <img src="/logo_sk.png" alt="SK telecom" />
-        </Box>
-        <Box>
-          <img
-            src="/logo_esg2023.png"
-            alt="ESG Korea 2023 Powered by SK telecom"
-          />
-        </Box>
-        <Box>
-          <img src="/logo_snuh.png" alt="SNUH" />
-        </Box>
-        <Box>
-          <img src="/logo_nest.png" alt="Start-up NEST" />
-        </Box>
-        <Box>
-          <img src="/logo_hondream.png" alt="H OnDream" />
-        </Box>
+      <Box sx={{ width: "100%", overflow: "hidden" }}>
+        <Swiper
+          slidesPerView={"auto"}
+          spaceBetween={80}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: true,
+          }}
+          loop={true}
+          modules={[Autoplay]}
+          className="logoWrapper"
+        >
+          {partners.map((logo, idx) => {
+            return (
+              <SwiperSlide key={idx}>
+                <Box>
+                  <img src={logo.imgSrc} alt={logo.alt} id={logo.id} />
+                </Box>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
       </Box>
     </Box>
   );

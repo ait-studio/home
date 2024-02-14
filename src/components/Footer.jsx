@@ -10,15 +10,15 @@ function Footer() {
     <Box id="footer" className="pageContent">
       <Box>
         <img
-          src="/Black_LOGOTYPE-horizontal_cut.png"
+          src="/White_LOGOTYPE-horizontal_cut.png"
           alt="logo"
-          className="logo invert"
+          className="logo"
         />
         <Typography>{t("contact-to")}</Typography>
         <Typography>{t("location")}</Typography>
       </Box>
       <Box>
-        <Box className="flexHor">
+        <Box className="flexHor no-scroll">
           <Typography>{t("privacy-policy")}</Typography>
           <Typography>|</Typography>
           <Typography>{t("terms-of-use")}</Typography>

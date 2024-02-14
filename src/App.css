@@ -3,6 +3,32 @@ html {
   /* word-break: keep-all; */
 }
 
+::selection {
+  background: #007aff;
+  color: #fff;
+}
+
+.no-scroll {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.button {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 span {
   display: block;
 }
@@ -92,7 +118,8 @@ a {
 }
 
 .button {
-  width: 256px;
+  width: max-content;
+  padding: 0 2rem;
   height: 64px;
   box-sizing: border-box;
 
@@ -119,6 +146,11 @@ a {
 .button:hover {
   background: #0094ff;
   color: #fff;
+}
+
+.outlined {
+  text-shadow: -3px 0px 4px white, 0px 3px 4px white, 3px 0px 4px white,
+    0px -3px 4px white;
 }
 
 .pageContent {
@@ -154,6 +186,12 @@ a {
   line-height: normal;
   margin: 0 2rem;
   text-transform: none;
+
+  cursor: pointer;
+}
+
+#header .navButton p {
+  width: max-content;
 }
 
 #header .dropdown .navButton {
@@ -196,9 +234,14 @@ a {
   cursor: pointer;
 }
 
+#header .logo {
+  width: auto;
+  height: 1.5rem;
+}
+
 /* Footer */
 #footer {
-  height: 208px;
+  /* height: 208px; */
   background: #000;
   box-sizing: border-box;
   padding-top: 56px;
@@ -228,6 +271,8 @@ a {
   flex-direction: column;
   justify-content: end;
   align-items: end;
+
+  margin-left: 3rem;
 }
 
 #footer div:nth-child(2) div p {
@@ -238,6 +283,9 @@ a {
   font-style: normal;
   font-weight: 600;
   line-height: 26px;
+
+  width: max-content;
+  cursor: pointer;
 }
 
 #footer div:nth-child(2) div p:nth-child(1) {
@@ -265,6 +313,8 @@ a {
   font-style: normal;
   font-weight: 400;
   line-height: 26px; /* 185.714% */
+
+  width: max-content;
 }
 
 /* Main - Cover */
@@ -317,6 +367,9 @@ a {
   /* height: 909px; */
   display: flex;
   justify-content: space-between;
+  box-sizing: border-box;
+
+  position: relative;
 }
 
 .mainSolution .content {
@@ -350,7 +403,7 @@ a {
 }
 
 .mainSolution .content .paragraph {
-  width: 465px;
+  width: 35rem;
   margin-bottom: 56px;
 }
 
@@ -369,8 +422,13 @@ a {
 }
 
 .mainSolution img.kiosk {
-  height: 703px;
-  margin-top: 110px;
+  z-index: -1;
+  position: absolute;
+  right: max(calc((100% - 1440px) / 2), 15vw);
+  height: 65%;
+  max-height: 40rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /* Main - Solution */
@@ -382,10 +440,13 @@ a {
 }
 
 .mainFeatures .feature {
-  height: 205px;
+  /* height: 205px; */
+  height: 13rem;
+  box-sizing: border-box;
+  padding: 2rem 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
   border-right: solid 1px rgba(255, 255, 255, 0.25);
@@ -398,23 +459,24 @@ a {
 .mainFeatures .feature .title {
   color: #fff;
   text-align: center;
-  font-family: Inter;
-  font-size: 44px;
+  font-size: 2.5rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
+  word-break: keep-all;
 }
 
 .mainFeatures .feature .text p {
   color: #fff;
   text-align: center;
-  font-family: Inter;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 400;
   line-height: 32px; /* 160% */
+
+  word-break: keep-all;
 }
 
 /* Main - Contact */
@@ -553,7 +615,6 @@ a {
 
 /* Main - Partners */
 .mainPartners {
-  /* height: 523px; */
   padding-top: 120px;
   padding-bottom: 120px;
   background: #fff;
@@ -587,36 +648,33 @@ a {
 .mainPartners .logoWrapper {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .mainPartners .logoWrapper div {
-  min-height: 150px;
   display: flex;
-  /* justify-content: center; */
   align-items: center;
+
+  width: max-content;
 }
 
-.mainPartners .logoWrapper div:nth-child(1) img {
+.mainPartners .logoWrapper img#SK-telecom {
   width: 173px;
   height: 76px;
-  margin-right: 80px;
 }
-.mainPartners .logoWrapper div:nth-child(2) img {
+.mainPartners .logoWrapper img#ESG-Korea-2023 {
   width: 203px;
   height: 46px;
-  margin-right: 82px;
 }
-.mainPartners .logoWrapper div:nth-child(3) img {
+.mainPartners .logoWrapper img#SNUH {
   width: 151px;
   height: 151px;
-  margin-right: 84px;
 }
-.mainPartners .logoWrapper div:nth-child(4) img {
+.mainPartners .logoWrapper img#start-up-NEST {
   width: 132px;
   height: 110px;
-  margin-right: 92px;
 }
-.mainPartners .logoWrapper div:nth-child(5) img {
+.mainPartners .logoWrapper img#H-OnDream {
   width: 162px;
   height: 57px;
 }
@@ -904,7 +962,7 @@ a {
 }
 
 .product .overview img {
-  max-width: 100%;
+  max-height: 30rem;
 }
 
 .product.gaitStudio .overview .catchphrase {
@@ -1189,7 +1247,6 @@ a {
 .product.medistep .keyFeatures .content .feature {
   position: absolute;
   width: 19rem;
-  text-shadow: -2px 0px white, 0px 2px white, 2px 0px white, 0px -2px white;
 }
 
 .product.medistep .keyFeatures .content .feature.left {
@@ -1366,18 +1423,25 @@ a {
     line-height: 1.5;
   }
 
+  #header .logoBtn {
+    padding-left: 0;
+  }
+  #header .logo {
+    height: 1.25rem;
+  }
+
   #footer {
     height: auto;
     flex-wrap: wrap;
 
-    padding-top: 80px;
-    padding-bottom: 176px;
+    padding-top: 4rem;
+    padding-bottom: 8rem;
   }
 
   #footer .logo {
     width: auto;
-    height: 2rem;
-    margin-bottom: 48px;
+    height: 1.75rem;
+    margin-bottom: 0.75rem;
   }
 
   #footer > div:nth-child(1) p {
@@ -1387,16 +1451,17 @@ a {
   }
 
   #footer > div:nth-child(1) {
-    margin-bottom: 40px;
+    margin-bottom: 0.5rem;
   }
 
   #footer div:nth-child(2) {
     justify-content: start;
     align-items: start;
+    margin-left: 0;
   }
 
   #footer div:nth-child(2) div {
-    margin-bottom: 16px;
+    margin-bottom: 0.5rem;
   }
 
   #footer div:nth-child(2) div p,
@@ -1490,25 +1555,25 @@ a {
   }
 
   .mainSolution img.kiosk {
+    position: initial;
+    transform: none;
     width: 100%;
     height: auto;
-    margin-top: 0px;
-    margin-bottom: 127px;
     margin-bottom: 5rem;
   }
 
   /* Main - Solution */
   .mainFeatures {
     height: auto;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   .mainFeatures .feature {
     height: auto;
     border-right: 0px;
 
-    margin-bottom: 5rem;
+    margin-bottom: 0;
   }
 
   .mainFeatures .feature:nth-last-child(1) {
@@ -1537,9 +1602,9 @@ a {
   }
 
   .mainContact .content {
+    padding-top: 8rem;
     padding-bottom: 0px;
-    margin-bottom: 80px;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
 
   .mainContact .videoWrapper {
@@ -1552,7 +1617,7 @@ a {
   }
 
   .mainContact .content .title {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   .mainContact .content .title p {
@@ -1561,7 +1626,7 @@ a {
 
   .mainContact .content .button {
     width: auto;
-    padding: 1rem 1.5rem;
+    padding: 1rem 0.5rem;
   }
 
   /* Main - Contact */
@@ -1584,8 +1649,8 @@ a {
   /* Main - Partners */
   .mainPartners {
     height: auto;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
     align-items: start;
   }
 
@@ -1621,9 +1686,9 @@ a {
     width: max-content;
   }
 
-  .aboutPage .pageContent {
+  /* .aboutPage .pageContent {
     padding-bottom: 1.5rem;
-  }
+  } */
 
   .aboutPage .peoples .title {
     display: flex;
@@ -1633,7 +1698,249 @@ a {
     margin-bottom: 1rem;
   }
 
-  /* .mainContact .content .btnWrapper {
-    flex-wrap: wrap;
-  } */
+  .product {
+    margin-top: 57px;
+  }
+
+  .product.gaitStudio .overview .catchphrase {
+    padding-top: 8rem;
+    margin-bottom: 1rem;
+  }
+
+  .product .catchphrase p {
+    font-size: 1.5rem;
+  }
+
+  .product .overview .name {
+    font-size: 1.75rem;
+  }
+
+  .product.gaitStudio .overview .name {
+    margin-bottom: 1.25rem;
+  }
+
+  .product.gaitStudio .paragraph,
+  .product.gaitStudio .aboutProduct img {
+    padding: 0 0%;
+  }
+
+  .product .paragraph,
+  .product .paragraph p {
+    font-size: 0.75rem;
+  }
+
+  .product.gaitStudio .overview .paragraph {
+    margin-bottom: 2.5rem;
+  }
+
+  .product.gaitStudio .capsuleButton {
+    padding: 0.5rem 1.75rem;
+
+    margin-bottom: 6rem;
+  }
+
+  .product.gaitStudio .capsuleButton p {
+    font-size: 0.75rem;
+  }
+
+  .product.gaitStudio .aboutProduct {
+    margin-bottom: 6rem;
+  }
+
+  .product .title {
+    font-size: 1.75rem;
+  }
+
+  .product.gaitStudio .aboutProduct .paragraph {
+    padding: 0 10%;
+  }
+
+  .product .aboutProduct .content {
+    margin-bottom: 3rem;
+  }
+
+  .product.gaitStudio .aboutProduct img {
+    max-height: 12rem;
+  }
+
+  .product.gaitStudio .promotion {
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 2.5rem;
+  }
+
+  .product.gaitStudio .promotion .titleWrapper {
+    text-align: center;
+  }
+
+  .product.gaitStudio .promotion img.qr {
+    height: auto;
+    width: 40%;
+    margin-top: 1.75rem;
+  }
+
+  .product.gaitStudio .downloadButton {
+    position: initial;
+    margin-top: 2rem;
+
+    padding: 0.6rem 2rem 0.4rem 2rem;
+  }
+
+  .product.gaitStudio .downloadButton img {
+    height: 1.75rem;
+  }
+
+  .product.medistep .overview {
+    overflow: hidden;
+  }
+
+  .product.medistep .overview .logo {
+    height: 1.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .product.medistep .overview .name {
+    margin-bottom: 1rem;
+  }
+
+  .product.gaitStudio .overview img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .product.medistep .overview img {
+    height: 25rem;
+    margin-bottom: 4rem;
+  }
+
+  .product.medistep .overview .catchphrase {
+    margin-bottom: 3.5rem;
+  }
+
+  .product.medistep .overview .paragraph {
+    margin-bottom: 6.5rem;
+  }
+
+  .product.medistep .overview .catchphrase,
+  .product.medistep .overview .paragraph,
+  .product.medistep .AISensing .paragraph {
+    padding: 0 5%;
+  }
+
+  .product.medistep .background .problems {
+    padding: 0 0%;
+    margin-bottom: 4rem;
+  }
+
+  .product.medistep .background .problem {
+    max-width: 15rem;
+    padding: 0.5rem 0;
+    border-width: 1px;
+    margin-bottom: 2.5rem;
+  }
+
+  .product.medistep .background .problem .paragraph {
+    padding: 0 5%;
+    margin-bottom: 0.25rem;
+  }
+
+  .product.medistep .background .paragraphWrapper {
+    margin-bottom: 8rem;
+  }
+
+  .product.medistep .background .problem .paragraph:nth-last-child(1) {
+    padding: 0 5%;
+    margin-bottom: 0rem;
+  }
+
+  .product.medistep .paragraph {
+    padding: 0 5%;
+  }
+
+  .product.medistep .aboutProduct .title {
+    padding: 0 10%;
+  }
+
+  .product.medistep .aboutProduct .paragraph {
+    padding: 0 5%;
+  }
+
+  .product.medistep .aboutProduct {
+    margin-bottom: 7rem;
+  }
+
+  .product.medistep .keyFeatures .content .feature.top {
+    top: 1rem;
+  }
+
+  .product.medistep .keyFeatures .content .feature .title {
+    font-size: 1rem;
+  }
+
+  .product.medistep .keyFeatures .content .feature .paragraph {
+    font-size: 0.6rem;
+  }
+
+  .product.medistep .keyFeatures .content .feature {
+    position: absolute;
+    width: 11rem;
+  }
+
+  .product.medistep .resultSheet .title {
+    margin-bottom: 2.5rem;
+  }
+
+  .product.medistep .resultSheet img {
+    margin-bottom: 1.5rem;
+  }
+
+  .product.medistep .resultSheet .paragraph {
+    padding: 0 5%;
+
+    margin-bottom: 4rem;
+  }
+
+  .product.medistep .AISensing {
+    padding-top: 0rem;
+    position: relative;
+  }
+
+  .product.medistep .AISensing .videoWrapper {
+    position: inherit;
+    width: 100%;
+    height: 15rem;
+    background-color: #d9d9d9;
+  }
+
+  .product.medistep .AISensing .paragraph {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+  }
+
+  .product.medistep .techSpec .title {
+    margin-bottom: 4rem;
+  }
+
+  .product.medistep .techSpec .headline {
+    padding-bottom: 1rem;
+  }
+
+  .product.medistep .techSpec > .headline {
+    margin-bottom: 2rem;
+  }
+
+  .product.medistep .techSpec .table .category {
+    flex-direction: column;
+  }
+
+  .product.medistep .techSpec .table .itemRow .subject {
+    min-width: 50%;
+    width: 50%;
+  }
+
+  .product.medistep .techSpec .table .itemRow {
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.4rem;
+  }
 }
