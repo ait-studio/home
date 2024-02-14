@@ -678,6 +678,26 @@ a {
   width: 162px;
   height: 57px;
 }
+.mainPartners .logoWrapper img#gwanju-technopark {
+  width: auto;
+  height: 50px;
+}
+.mainPartners .logoWrapper img#korea-univ-sejong-linc {
+  width: auto;
+  height: 40px;
+}
+.mainPartners .logoWrapper img#lg-elec {
+  width: auto;
+  height: 57px;
+}
+.mainPartners .logoWrapper img#mysc {
+  width: auto;
+  height: 57px;
+}
+.mainPartners .logoWrapper img#sba {
+  width: auto;
+  height: 32px;
+}
 
 .pageTitle {
   margin-top: calc(64px + 1rem);
@@ -1657,19 +1677,6 @@ a {
   .mainPartners .logoWrapper {
     flex-wrap: wrap;
     box-sizing: content-box;
-  }
-
-  .mainPartners .logoWrapper div:nth-child(2) img {
-    margin-right: 0px;
-  }
-  .mainPartners .logoWrapper div:nth-child(3) img {
-    margin-right: 64px;
-  }
-  .mainPartners .logoWrapper div:nth-child(4) img {
-    margin-right: 64px;
-  }
-  .mainPartners .logoWrapper div:nth-child(5) img {
-    margin-top: 25px;
   }
 
   .newsPage .news {

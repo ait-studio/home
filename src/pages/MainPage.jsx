@@ -257,6 +257,31 @@ function Partners() {
       alt: "H OnDream",
       id: "H-OnDream",
     },
+    {
+      imgSrc: "/logo_gwangju_technopark.png",
+      alt: "Gwanju Technopark",
+      id: "gwanju-technopark",
+    },
+    {
+      imgSrc: "/logo_korea_linc.png",
+      alt: "Korea University Sejong Campus LINC",
+      id: "korea-univ-sejong-linc",
+    },
+    {
+      imgSrc: "/logo_lge.png",
+      alt: "LG Electronics",
+      id: "lg-elec",
+    },
+    {
+      imgSrc: "/logo_mysc.png",
+      alt: "mysc",
+      id: "mysc",
+    },
+    {
+      imgSrc: "/logo_sba.png",
+      alt: "Seoul Business Agency",
+      id: "sba",
+    },
   ];
 
   return (
