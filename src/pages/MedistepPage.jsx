@@ -1,6 +1,5 @@
 import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import Grid from "@mui/material/Grid";
 import Footer from "../components/Footer";
 import ScrollToTopBtn from "../components/ScrollTopBtn";
 import Header from "../components/Header";

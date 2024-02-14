@@ -18,7 +18,6 @@ import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 
 import ScrollToTop from "../Tools/ScrollToTop";
-import { Link } from "react-scroll";
 import { useTranslation } from "react-i18next";
 import LanguageSwitchButton from "./LanguageSwitchButton";
 
