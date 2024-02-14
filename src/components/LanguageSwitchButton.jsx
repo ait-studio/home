@@ -11,15 +11,16 @@ export default function LanguageSwitchButton() {
       <LanguageIcon className="icon" />
       <Box className="buttonWrapper">
         {languageItems
-          .sort(function (a, b) {
-            if (i18n.language === a && i18n.language !== b) {
-              return -1;
-            }
-            if (i18n.language !== a && i18n.language === b) {
-              return 1;
-            }
-            return a - b;
-          })
+          // .sort(function (a, b) {
+          //   if (i18n.language === a && i18n.language !== b) {
+          //     return -1;
+          //   }
+          //   if (i18n.language !== a && i18n.language === b) {
+          //     return 1;
+          //   }
+          //   return a - b;
+          // })
+          .reverse()
           .map((item, idx) => (
             <Box
               className={
