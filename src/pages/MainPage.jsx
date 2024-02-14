@@ -13,6 +13,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 // import required modules
 import { Autoplay } from "swiper/modules";
+import { newsList } from "./NewsPage";
 
 function Cover() {
   const { t } = useTranslation();
@@ -176,29 +177,7 @@ function News() {
       <Typography className="header">{t("news")}</Typography>
       <Typography className="title">{t("main-news-title")}</Typography>
       <Grid container spacing={2} justifyContent="center">
-        {[
-          {
-            imgSrc: "/news_1.jpeg",
-            link: "https://www.mk.co.kr/news/it/10880891",
-            title: "에이트스튜디오, AI로 노인의 퇴행성 질환 진단",
-          },
-          {
-            imgSrc: "/news_2.jpeg",
-            link: "https://www.sedaily.com/NewsView/29W2K8YK2U",
-            title: "SBA, 오픈이노베이션 데모데이 ‘IMPACT DIVE 2023’ 개최",
-          },
-          {
-            imgSrc: "/news_3.png",
-            link: "https://www.aitimes.com/news/articleView.html?idxno=154454",
-            title: "에이트스튜디오, 파킨슨병 진단하는 모바일 앱 출시한다",
-          },
-          {
-            imgSrc: "/news_4.png",
-            link: "https://www.aitimes.com/news/articleView.html?idxno=152026",
-            title:
-              "[AI&빅데이터쇼] 에이트스튜디오, 파킨슨병 자가진단하는 AI 앱 소개",
-          },
-        ].map((item, idx) => {
+        {newsList.slice(0, 4).map((item, idx) => {
           return (
             <Grid item xs={6} sm={6} md={3} xl={3} className="news" key={idx}>
               <a href={item.link} target="_blank" rel="noreferrer">
