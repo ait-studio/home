@@ -1350,20 +1350,16 @@ a {
 }
 
 .product.medistep .AISensing {
-  padding-top: 45rem;
   position: relative;
 }
 
 .product.medistep .AISensing .videoWrapper {
-  position: absolute;
+  position: relative;
 
   width: 100vw;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-
-  height: 45rem;
-  background-color: #d9d9d9;
 }
 
 .product.medistep .AISensing video {
@@ -1961,7 +1957,6 @@ a {
   }
 
   .product.medistep .AISensing {
-    padding-top: 0rem;
     position: relative;
   }
 
@@ -1969,7 +1964,6 @@ a {
     position: inherit;
     width: 100%;
     height: 15rem;
-    background-color: #d9d9d9;
   }
 
   .product.medistep .AISensing .paragraph {

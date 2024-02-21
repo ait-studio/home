@@ -169,7 +169,7 @@ function AISensing() {
     <Box className="AISensing">
       <Box className="videoWrapper">
         <video controls={false} autoPlay loop muted>
-          <source src={"./introduce_AISensing.mp4"} type="video/mp4" />
+          <source src={"/introduce_AISensing.mp4"} type="video/mp4" />
         </video>
       </Box>
       <Typography className="paragraph">
