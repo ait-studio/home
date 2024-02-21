@@ -48,8 +48,13 @@ function Header(props) {
       ],
     },
     {
-      Text: t("news-center"),
+      // Text: t("news-center"),
+      Text: t("ir"),
       subPage: [
+        {
+          text: t("about-prCenter-title"),
+          link: "/ir",
+        },
         {
           text: t("news"),
           link: "/news",

@@ -9,6 +9,7 @@ import GaitStudioPage from "./pages/GaitStudioPage";
 
 import { createTheme } from "@mui/material/styles";
 import { ThemeProvider } from "@mui/material/styles";
+import IRPage from "./pages/IRPage";
 
 const THEME = createTheme({
   typography: {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/" exact element={<MainPage />} />
           <Route path="/about" exact element={<AboutPage />} />
           <Route path="/news" exact element={<NewsPage />} />
+          <Route path="/ir" exact element={<IRPage />} />
           <Route path="/product/medistep" exact element={<MedistepPage />} />
           <Route
             path="/product/gaitstudio"

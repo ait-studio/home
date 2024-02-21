@@ -924,35 +924,43 @@ a {
   line-height: 1.6;
 }
 
-.aboutPage .prCenter .content .section {
+.prCenter .content .section {
   display: flex;
   justify-content: space-between;
   margin-bottom: 3rem;
 }
 
-.aboutPage .prCenter .content .section:nth-last-child(1) {
+.prCenter .content .section:nth-last-child(1) {
   margin-bottom: 0rem;
 }
 
-.aboutPage .prCenter .content .title p {
+.prCenter .content .title p {
   color: #181818;
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: -1px;
 }
 
-.aboutPage .prCenter .content .videoWrapper {
-  background-color: #939393;
-  height: 18rem;
-  /* border: 1px #181818 solid; */
+.prCenter .content .videoWrapper {
+  margin-bottom: 1.5rem;
+}
+
+.prCenter .content .videoWrapper p {
+  font-weight: 500;
+  color: #939393;
+  padding-top: 0.2rem;
+}
+
+.prCenter .content .videoWrapper:nth-last-child(1) {
+  margin-bottom: 0rem;
+}
+
+.prCenter .content .videoWrapper video {
   box-shadow: 0px 10px 10px -10px rgba(171, 171, 171, 0.35);
+  height: 18rem;
 }
 
-.aboutPage .prCenter .content .videoWrapper video {
-  height: 100%;
-}
-
-.aboutPage .prCenter .content .button {
+.prCenter .content .button {
   border-radius: 4rem;
   border-color: #181818;
   color: #181818;
@@ -962,16 +970,16 @@ a {
   margin-bottom: 0.5rem;
 }
 
-.aboutPage .prCenter .content .button:hover {
+.prCenter .content .button:hover {
   background-color: #181818;
   color: #fff;
 }
 
-.aboutPage .prCenter .content .button:nth-last-child(1) {
+.prCenter .content .button:nth-last-child(1) {
   margin-bottom: 0rem;
 }
 
-.aboutPage .prCenter .content .button .MuiSvgIcon-root {
+.prCenter .content .button .MuiSvgIcon-root {
   margin-right: 0.5rem;
 }
 
@@ -1741,9 +1749,24 @@ a {
     width: max-content;
   }
 
-  /* .aboutPage .pageContent {
-    padding-bottom: 1.5rem;
-  } */
+  .prCenter .section {
+    flex-direction: column;
+    margin-bottom: 3rem;
+  }
+
+  .prCenter .videoWrapper {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .prCenter .videoWrapper video {
+    width: 100%;
+  }
+
+  .prCenter .buttonWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
 
   .aboutPage .peoples .title {
     display: flex;

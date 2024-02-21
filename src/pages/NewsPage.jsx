@@ -84,6 +84,7 @@ function News() {
     </Box>
   );
 }
+
 export default function NewsPage() {
   const { t } = useTranslation();
 
