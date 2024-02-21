@@ -167,7 +167,11 @@ function AISensing() {
 
   return (
     <Box className="AISensing">
-      <Box className="videoWrapper"></Box>
+      <Box className="videoWrapper">
+        <video controls={false} autoPlay loop muted>
+          <source src={"./introduce_AISensing.mp4"} type="video/mp4" />
+        </video>
+      </Box>
       <Typography className="paragraph">
         {t("product-medistep-ai-sensing-content")}
       </Typography>

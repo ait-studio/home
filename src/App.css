@@ -133,7 +133,7 @@ a {
 
   color: #0094ff;
   text-align: center;
-  font-family: Inter;
+
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -253,7 +253,7 @@ a {
 
 #footer > div:nth-child(1) p {
   color: #fff;
-  font-family: Inter;
+
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -278,7 +278,7 @@ a {
 #footer div:nth-child(2) div p {
   color: #fff;
   text-align: right;
-  font-family: Inter;
+
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
@@ -295,7 +295,7 @@ a {
 #footer div:nth-child(2) div p:nth-child(2) {
   color: #c7c7c7;
   text-align: right;
-  font-family: Inter;
+
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -308,7 +308,7 @@ a {
 
 #footer div:nth-child(2) > p {
   color: #c7c7c7;
-  font-family: Inter;
+
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -333,7 +333,7 @@ a {
 
 .mainCover .title .header p {
   color: #fff;
-  font-family: Inter;
+
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -355,7 +355,7 @@ a {
 
 .mainCover .caption p {
   color: #fff;
-  font-family: Inter;
+
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
@@ -382,7 +382,7 @@ a {
 
 .mainSolution .content .header p {
   color: #0587ff;
-  font-family: Inter;
+
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -395,8 +395,8 @@ a {
 
 .mainSolution .content .title p {
   color: #181818;
-  font-family: Inter;
-  font-size: 44px;
+
+  font-size: 2.25rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -409,8 +409,7 @@ a {
 
 .mainSolution .content .paragraph p {
   color: #444;
-  font-family: Inter;
-  font-size: 18px;
+  font-size: 1.1rem;
   font-style: normal;
   font-weight: 400;
   line-height: 30px; /* 166.667% */
@@ -434,19 +433,19 @@ a {
 /* Main - Solution */
 .mainFeatures {
   /* height: 445px; */
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   background: #0094ff;
 }
 
 .mainFeatures .feature {
   /* height: 205px; */
-  height: 13rem;
+  /* height: 13rem; */
   box-sizing: border-box;
   padding: 2rem 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
 
   border-right: solid 1px rgba(255, 255, 255, 0.25);
@@ -457,24 +456,28 @@ a {
 }
 
 .mainFeatures .feature .title {
+  padding: 0 0.5rem;
+
   color: #fff;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 
-  /* margin-bottom: 40px; */
+  margin-bottom: 1.5rem;
   word-break: keep-all;
 }
 
 .mainFeatures .feature .text p {
+  padding: 0 1rem;
+
   color: #fff;
   text-align: center;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 32px; /* 160% */
+  line-height: 1.5; /* 160% */
 
   word-break: keep-all;
 }
@@ -498,7 +501,6 @@ a {
 
 .mainContact .content .header p {
   color: #0587ff;
-  font-family: Inter;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -511,8 +513,7 @@ a {
 
 .mainContact .content .title p {
   color: #000;
-  font-family: Inter;
-  font-size: 44px;
+  font-size: 2.25rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -567,7 +568,7 @@ a {
 
 .mainNews .header {
   color: #0587ff;
-  font-family: Inter;
+
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -578,8 +579,8 @@ a {
 
 .mainNews .title {
   color: #181818;
-  font-family: Inter;
-  font-size: 44px;
+
+  font-size: 2.25rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -600,8 +601,7 @@ a {
 
 .mainNews .news .caption {
   color: #181818;
-  font-family: Inter;
-  font-size: 20px;
+  font-size: 1.1rem;
   font-style: normal;
   font-weight: 400;
 
@@ -625,7 +625,6 @@ a {
 
 .mainPartners .header {
   color: #0587ff;
-  font-family: Inter;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -636,8 +635,7 @@ a {
 
 .mainPartners .title {
   color: #181818;
-  font-family: Inter;
-  font-size: 44px;
+  font-size: 2.25rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -711,7 +709,7 @@ a {
 
 .pageTitle p {
   color: #181818;
-  font-family: Inter;
+
   font-size: 2.5rem;
   font-style: normal;
   font-weight: 700;
@@ -747,7 +745,6 @@ a {
 
 .newsPage .news .newsCard .caption {
   color: #444;
-  font-family: Inter;
   font-size: 1rem;
   font-weight: 700;
   display: inline;
@@ -767,19 +764,16 @@ a {
 .sectionWrapper .title {
   box-sizing: border-box;
   margin-right: 2rem;
-  width: 15%;
-  min-width: 10rem;
   margin-bottom: 1.5rem;
+  width: 14rem;
 }
 
 .sectionWrapper .title p {
-  width: 10rem;
+  width: max-content;
   color: #181818;
-  font-family: Inter;
   font-size: 1.75rem;
   line-height: 1.25;
   font-weight: 700;
-  word-break: keep-all;
 }
 
 .sectionWrapper .content {
@@ -796,7 +790,6 @@ a {
 
 .sectionWrapper .content > div > p {
   color: #181818;
-  font-family: Inter;
   font-size: 1rem;
   line-height: 1.75;
 }
@@ -814,7 +807,6 @@ a {
 }
 
 .aboutPage .background .referenceCard p {
-  font-family: Inter;
   font-size: 1rem;
   line-height: 1.75rem;
 }
@@ -822,7 +814,6 @@ a {
 .aboutPage .background .referenceCard .title {
   width: 100%;
   color: #181818;
-  font-family: Inter;
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
@@ -861,7 +852,7 @@ a {
 }
 .aboutPage .missions .mission p {
   color: #181818;
-  font-family: Inter;
+
   font-size: 1rem;
   line-height: 1.75;
 }
@@ -872,7 +863,7 @@ a {
 
 .aboutPage .history .content .timeline .year {
   color: #181818;
-  font-family: Inter;
+
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: -1px;
@@ -895,7 +886,7 @@ a {
 
 .aboutPage .history .content .timeline .event p {
   color: #181818;
-  font-family: Inter;
+
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 0.5rem;
@@ -920,7 +911,7 @@ a {
 
 .aboutPage .peoples .content .people .name {
   color: #181818;
-  font-family: Inter;
+
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 0.75rem;
@@ -928,9 +919,60 @@ a {
 
 .aboutPage .peoples .content .people .resume {
   color: #181818;
-  font-family: Inter;
+
   font-size: 1rem;
   line-height: 1.6;
+}
+
+.aboutPage .prCenter .content .section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.aboutPage .prCenter .content .section:nth-last-child(1) {
+  margin-bottom: 0rem;
+}
+
+.aboutPage .prCenter .content .title p {
+  color: #181818;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.aboutPage .prCenter .content .videoWrapper {
+  background-color: #939393;
+  height: 18rem;
+  /* border: 1px #181818 solid; */
+  box-shadow: 0px 10px 10px -10px rgba(171, 171, 171, 0.35);
+}
+
+.aboutPage .prCenter .content .videoWrapper video {
+  height: 100%;
+}
+
+.aboutPage .prCenter .content .button {
+  border-radius: 4rem;
+  border-color: #181818;
+  color: #181818;
+  height: auto;
+  width: 19rem;
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+}
+
+.aboutPage .prCenter .content .button:hover {
+  background-color: #181818;
+  color: #fff;
+}
+
+.aboutPage .prCenter .content .button:nth-last-child(1) {
+  margin-bottom: 0rem;
+}
+
+.aboutPage .prCenter .content .button .MuiSvgIcon-root {
+  margin-right: 0.5rem;
 }
 
 .aboutPage .gridContainer {
@@ -992,7 +1034,7 @@ a {
 
 .product .catchphrase p {
   color: #939393;
-  font-family: Inter;
+
   font-size: 2.5rem;
   font-weight: 700;
   line-height: normal;
@@ -1001,7 +1043,7 @@ a {
 
 .product .overview .name {
   color: #000;
-  font-family: Inter;
+
   font-size: 3rem;
   font-weight: 800;
   line-height: normal;
@@ -1019,7 +1061,7 @@ a {
 .product .paragraph,
 .product .paragraph p {
   color: #939393;
-  font-family: Inter;
+
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.5;
@@ -1074,7 +1116,7 @@ a {
 
 .product .title {
   color: #000;
-  font-family: Inter;
+
   font-size: 2rem;
   font-weight: 700;
   line-height: normal;
@@ -1324,6 +1366,10 @@ a {
   background-color: #d9d9d9;
 }
 
+.product.medistep .AISensing video {
+  width: 100%;
+}
+
 .product.medistep .AISensing .paragraph {
   margin-top: 4rem;
   margin-bottom: 10rem;
@@ -1402,6 +1448,12 @@ a {
   }
   .aboutPage .history .content .timeline {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 900px) {
+  .mainFeatures .feature {
+    border-right: 0px;
   }
 }
 
