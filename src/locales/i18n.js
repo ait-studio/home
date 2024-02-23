@@ -12,7 +12,7 @@ i18n.use(initReactI18next).init({
       translation: ko,
     },
   },
-  lng: "ko",
+  lng: "en",
   fallbackLng: {
     ko: ["ko"],
     default: ["en"],

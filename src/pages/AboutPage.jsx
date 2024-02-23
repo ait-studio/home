@@ -214,6 +214,8 @@ function Peoples() {
         t("about-peoples-1-resume-1"),
         t("about-peoples-1-resume-2"),
         t("about-peoples-1-resume-3"),
+        t("about-peoples-1-resume-4"),
+        t("about-peoples-1-resume-5"),
       ],
     },
     {
@@ -245,7 +247,9 @@ function Peoples() {
             <Grid item xs={12} sm={12} md={12} lg={3} xl={3} key={number}>
               <Box className="people">
                 <Typography className="name">{people.name}</Typography>
-                <Box className={number ? "inlineInMobile" : ""}>
+                <Box
+                // className={number ? "inlineInMobile" : ""}
+                >
                   {people.resume.map((item, idx) => (
                     <>
                       <Typography className="resume" key={idx}>

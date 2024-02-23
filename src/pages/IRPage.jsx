@@ -88,7 +88,7 @@ function PRcenter() {
             <Box
               className="button"
               onClick={() => {
-                downloadFile("AIT_IR_ko.pdf");
+                downloadFile("AIT_Studio_IR_ko.pdf");
               }}
             >
               <DownloadIcon />
@@ -97,7 +97,7 @@ function PRcenter() {
             <Box
               className="button"
               onClick={() => {
-                downloadFile("AIT_IR_en.pdf");
+                downloadFile("AIT_Studio_IR_en.pdf");
               }}
             >
               <DownloadIcon />

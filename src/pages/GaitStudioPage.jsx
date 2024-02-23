@@ -5,6 +5,8 @@ import ScrollToTopBtn from "../components/ScrollTopBtn";
 import Header from "../components/Header";
 import { useTranslation } from "react-i18next";
 
+const appStoreURL = "https://apps.apple.com/us/app/gait-studio/id6477136042";
+
 function Overview() {
   const { t } = useTranslation();
 
@@ -33,12 +35,11 @@ function Overview() {
           {t("product-gaitstudio-about-3")}
         </Typography>
       </Box>
-      <Box
-        className="capsuleButton"
-        onClick={() => console.log("download now!")}
-      >
-        <Typography>{t("product-gaitstudio-button")}</Typography>
-      </Box>
+      <a href={appStoreURL} target="_blank" rel="noreferrer">
+        <Box className="capsuleButton">
+          <Typography>{t("product-gaitstudio-button")}</Typography>
+        </Box>
+      </a>
     </Box>
   );
 }
@@ -106,16 +107,13 @@ function Promotion() {
         src="/gait-studio-qr.png"
         alt="gait studio download qr"
       />
-      <Box
-        className="downloadButton"
-        onClick={() => {
-          console.log("app store link!");
-        }}
-      >
-        <img
-          src="/gait-studio-download-ios.png"
-          alt="gait studio download button"
-        />
+      <Box className="downloadButton">
+        <a href={appStoreURL} target="_blank" rel="noreferrer">
+          <img
+            src="/gait-studio-download-ios.png"
+            alt="gait studio download button"
+          />
+        </a>
       </Box>
     </Box>
   );
