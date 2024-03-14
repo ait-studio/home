@@ -80,7 +80,8 @@ function Solution() {
         </Box>
       </Box>
       <img
-        src="/img_kiosk.png"
+        // src="/img_kiosk.png"
+        src="/medistep.png"
         alt="Medistep Kiosk"
         // className="oppacityControl"
         className="kiosk"
