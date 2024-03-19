@@ -941,6 +941,16 @@ a {
   letter-spacing: -1px;
 }
 
+.prCenter .content .title {
+  /* width: 8rem; */
+}
+
+.prCenter .content .content {
+  /* flex: 1; */
+  /* width: 100%; */
+  /* background-color: #939393; */
+}
+
 .prCenter .content .videoWrapper {
   margin-bottom: 1.5rem;
 }
@@ -948,7 +958,7 @@ a {
 .prCenter .content .videoWrapper p {
   font-weight: 500;
   color: #939393;
-  padding-top: 0.2rem;
+  padding-top: 0.5rem;
 }
 
 .prCenter .content .videoWrapper:nth-last-child(1) {
@@ -957,30 +967,38 @@ a {
 
 .prCenter .content .videoWrapper video {
   box-shadow: 0px 10px 10px -10px rgba(171, 171, 171, 0.35);
-  height: 18rem;
+  width: 100%;
+}
+
+.prCenter .content .buttonWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.prCenter .content .buttonWrapper p {
+  font-weight: 600;
+  color: #444;
 }
 
 .prCenter .content .button {
   border-radius: 4rem;
-  border-color: #181818;
-  color: #181818;
+  border-color: #0094ff;
+  color: #0094ff;
   height: auto;
-  width: 19rem;
-  padding: 0.5rem 0;
-  margin-bottom: 0.5rem;
+  padding: 0.4rem 1.5rem;
+}
+
+.prCenter .content .button {
+  font-size: 0.75rem;
 }
 
 .prCenter .content .button:hover {
-  background-color: #181818;
+  background-color: #0094ff;
   color: #fff;
-}
-
-.prCenter .content .button:nth-last-child(1) {
-  margin-bottom: 0rem;
-}
-
-.prCenter .content .button .MuiSvgIcon-root {
-  margin-right: 0.5rem;
 }
 
 .aboutPage .gridContainer {

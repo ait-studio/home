@@ -1,5 +1,6 @@
-import { Typography } from "@mui/material";
+import { Divider, Typography } from "@mui/material";
 import { Box } from "@mui/system";
+import Grid from "@mui/material/Grid";
 import Footer from "../components/Footer";
 import ScrollToTopBtn from "../components/ScrollTopBtn";
 import Header from "../components/Header";
@@ -33,12 +34,25 @@ function PRcenter() {
         <Typography>{t("about-prCenter-title")}</Typography>
       </Box> */}
       <Box className="content">
+        <Box className="section mwc2024">
+          <Box className="title">
+            <Typography>{t("about-prCenter-mwc2024-title")}</Typography>
+          </Box>
+          <Grid container>
+            <Grid item className="videoWrapper" xs={12}>
+              <video controls={true} autoPlay={false} loop={true} muted>
+                <source src="/mwc2024_liveSketch.mp4" type="video/mp4" />
+              </video>
+              <Typography>{t("about-prCenter-mwc2024-video-title")}</Typography>
+            </Grid>
+          </Grid>
+        </Box>
         <Box className="section prMaterials">
           <Box className="title">
             <Typography>{t("about-prCenter-prMaterials-title")}</Typography>
           </Box>
-          <Box>
-            <Box className="videoWrapper">
+          <Grid container spacing={2}>
+            <Grid item className="videoWrapper" xs={12} sm={6}>
               <video controls={true} autoPlay={false} loop={true}>
                 <source
                   src={t("about-prCenter-prMaterials-about-medistep-src")}
@@ -46,63 +60,81 @@ function PRcenter() {
                 />
               </video>
               <Typography>About Medistep</Typography>
-            </Box>
-            <Box className="videoWrapper">
+            </Grid>
+            <Grid item className="videoWrapper" xs={12} sm={6}>
               <video controls={true} autoPlay={false} loop={true}>
                 <source src={"usage_gaitStudio.mp4"} type="video/mp4" />
               </video>
-              <Typography>Gaitstudio demo</Typography>
-            </Box>
-          </Box>
+              <Typography>Gait Studio demo</Typography>
+            </Grid>
+          </Grid>
         </Box>
         <Box className="section brochure">
           <Box className="title">
             <Typography>{t("about-prCenter-brochure-title")}</Typography>
           </Box>
-          <Box className="buttonWrapper">
-            <Box
-              className="button"
-              onClick={() => {
-                downloadFile("AIT_Studio_brochure_Medistep_en.pdf");
-              }}
-            >
-              <DownloadIcon />
-              {t("about-prCenter-brochure-medistep-button-en")}
+          <Box className="content">
+            <Divider />
+            <Box className="buttonWrapper">
+              <Typography>
+                {t("about-prCenter-brochure-medistep-button-en")}
+              </Typography>
+              <Box
+                className="button"
+                onClick={() => {
+                  downloadFile("AIT_Studio_brochure_Medistep_en.pdf");
+                }}
+              >
+                {t("download")}
+              </Box>
             </Box>
-            <Box
-              className="button"
-              onClick={() => {
-                downloadFile("AIT_Studio_brochure_Gait_studio_en.pdf");
-              }}
-            >
-              <DownloadIcon />
-              {t("about-prCenter-brochure-gaitstudio-button-en")}
+            <Divider />
+            <Box className="buttonWrapper">
+              <Typography>
+                {t("about-prCenter-brochure-gaitstudio-button-en")}
+              </Typography>
+              <Box
+                className="button"
+                onClick={() => {
+                  downloadFile("AIT_Studio_brochure_Gait_studio_en.pdf");
+                }}
+              >
+                {t("download")}
+              </Box>
             </Box>
+            <Divider />
           </Box>
         </Box>
         <Box className="section IR">
           <Box className="title">
             <Typography>{t("about-prCenter-IR-title")}</Typography>
           </Box>
-          <Box className="buttonWrapper">
-            <Box
-              className="button"
-              onClick={() => {
-                downloadFile("AIT_Studio_IR_ko.pdf");
-              }}
-            >
-              <DownloadIcon />
-              {t("about-prCenter-IR-button-ko")}
+          <Box className="content">
+            <Divider />
+            <Box className="buttonWrapper">
+              <Typography>{t("about-prCenter-IR-button-ko")}</Typography>
+              <Box
+                className="button"
+                onClick={() => {
+                  downloadFile("AIT_Studio_IR_ko.pdf");
+                }}
+              >
+                {t("download")}
+              </Box>
             </Box>
-            <Box
-              className="button"
-              onClick={() => {
-                downloadFile("AIT_Studio_IR_en.pdf");
-              }}
-            >
-              <DownloadIcon />
-              {t("about-prCenter-IR-button-en")}
+            <Divider />
+            <Box className="buttonWrapper">
+              <Typography>{t("about-prCenter-IR-button-en")}</Typography>
+              <Box
+                className="button"
+                onClick={() => {
+                  downloadFile("AIT_Studio_IR_en.pdf");
+                }}
+              >
+                {t("download")}
+              </Box>
             </Box>
+            <Divider />
           </Box>
         </Box>
       </Box>
