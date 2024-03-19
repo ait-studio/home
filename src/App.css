@@ -942,13 +942,11 @@ a {
 }
 
 .prCenter .content .title {
-  /* width: 8rem; */
+  width: 12rem;
 }
 
-.prCenter .content .content {
-  /* flex: 1; */
-  /* width: 100%; */
-  /* background-color: #939393; */
+.prCenter .content .container {
+  width: 100%;
 }
 
 .prCenter .content .videoWrapper {
@@ -989,7 +987,7 @@ a {
   border-color: #0094ff;
   color: #0094ff;
   height: auto;
-  padding: 0.4rem 1.5rem;
+  padding: 0rem 1.75rem;
 }
 
 .prCenter .content .button {
@@ -2036,5 +2034,9 @@ a {
   .product.medistep .techSpec .table .itemRow {
     padding-bottom: 0.4rem;
     margin-bottom: 0.4rem;
+  }
+
+  .prCenter .content .button {
+    padding: 0.25rem 1rem;
   }
 }

@@ -73,7 +73,7 @@ function PRcenter() {
           <Box className="title">
             <Typography>{t("about-prCenter-brochure-title")}</Typography>
           </Box>
-          <Box className="content">
+          <Box className="container">
             <Divider />
             <Box className="buttonWrapper">
               <Typography>
@@ -109,7 +109,7 @@ function PRcenter() {
           <Box className="title">
             <Typography>{t("about-prCenter-IR-title")}</Typography>
           </Box>
-          <Box className="content">
+          <Box className="container">
             <Divider />
             <Box className="buttonWrapper">
               <Typography>{t("about-prCenter-IR-button-ko")}</Typography>
